@@ -1,4 +1,5 @@
 import { Link, AlertCircle, UserCheck, History } from 'lucide-react';
+import MockAuditTrail from './MockAuditTrail';
 
 const features = [
   {
@@ -50,11 +51,17 @@ export default function Features() {
 
                 {/* Screenshot Placeholder */}
                 <div className="flex-1 w-full relative group">
-                  <div className="w-full aspect-video rounded-2xl border-2 border-dashed border-[#d1cec7] bg-[#faf9f7] flex items-center justify-center transition-all duration-300 group-hover:bg-[#f0eee9] group-hover:border-[#1c1a17]/20">
-                    <div className="text-[#a8a49c] font-mono text-sm uppercase tracking-widest font-semibold">
-                      [ Screenshot: {feature.title.replace('.', '')} ]
+                  {feature.title === 'Full audit trail.' ? (
+                    <div className="w-full flex items-center justify-center transition-transform duration-500 group-hover:scale-[1.02]">
+                      <MockAuditTrail />
                     </div>
-                  </div>
+                  ) : (
+                    <div className="w-full aspect-video rounded-2xl border-2 border-dashed border-[#d1cec7] bg-[#faf9f7] flex items-center justify-center transition-all duration-300 group-hover:bg-[#f0eee9] group-hover:border-[#1c1a17]/20">
+                      <div className="text-[#a8a49c] font-mono text-sm uppercase tracking-widest font-semibold">
+                        [ Screenshot: {feature.title.replace('.', '')} ]
+                      </div>
+                    </div>
+                  )}
                   {/* Decorative glow behind placeholder */}
                   <div className="absolute -inset-4 bg-gradient-to-r from-teal-500/5 to-accent-ink/5 rounded-[2rem] blur-2xl -z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                 </div>

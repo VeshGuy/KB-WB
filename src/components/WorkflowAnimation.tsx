@@ -25,7 +25,7 @@ export default function WorkflowAnimation() {
       
       <div className="relative flex flex-col gap-4">
         {/* Connection Line */}
-        <div className="absolute left-6 top-6 bottom-6 w-0.5 bg-gray-200" />
+        <div className="absolute left-[23px] top-8 bottom-8 w-0.5 bg-gray-200 z-0" />
         
         {steps.map((step, idx) => {
           const isActive = idx === activeStep;
@@ -40,8 +40,8 @@ export default function WorkflowAnimation() {
               }`}
             >
               <div 
-                className={`w-12 h-12 rounded-full flex items-center justify-center border-2 transition-all duration-500 ${
-                  isActive ? `${step.bg} ${step.border} scale-110 shadow-lg` : 'bg-gray-50 border-gray-200'
+                className={`w-12 h-12 rounded-full flex items-center justify-center border-2 transition-all duration-500 bg-white ${
+                  isActive ? `${step.bg} ${step.border} scale-110 shadow-lg` : 'border-gray-200'
                 }`}
               >
                 <Icon className={`w-5 h-5 ${isActive ? step.color : 'text-gray-400'}`} />
