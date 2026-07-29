@@ -75,7 +75,7 @@ export default function MockDashboard({ activeStep }: { activeStep: number }) {
            <div className="border border-line rounded-lg bg-white p-4 flex flex-col gap-3">
               <div className="flex justify-between items-center">
                  <div className="flex items-center gap-2">
-                    <img src="https://cdn.simpleicons.org/salesforce/00A1E0" alt="Salesforce" className="w-5 h-5" />
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/f/f9/Salesforce.com_logo.svg" alt="Salesforce" className="w-7 h-5 object-contain" />
                     <span className="text-sm font-medium text-ink">Salesforce CRM</span>
                  </div>
                  <span className="text-[10px] font-bold text-emerald-600 bg-emerald-50 px-2 py-1 rounded">SYNCED</span>
@@ -86,6 +86,23 @@ export default function MockDashboard({ activeStep }: { activeStep: number }) {
               <div className="text-[11px] text-muted flex justify-between">
                  <span>Sync complete</span>
                  <span>Just now</span>
+              </div>
+           </div>
+
+           <div className="border border-line rounded-lg bg-white p-4 flex flex-col gap-3 opacity-75">
+              <div className="flex justify-between items-center">
+                 <div className="flex items-center gap-2">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/Slack_icon_2019.svg" alt="Slack" className="w-5 h-5" />
+                    <span className="text-sm font-medium text-ink">Slack Workspace</span>
+                 </div>
+                 <span className="text-[10px] font-bold text-amber-600 bg-amber-50 px-2 py-1 rounded">INDEXING</span>
+              </div>
+              <div className="w-full bg-surface h-1.5 rounded-full overflow-hidden">
+                 <div className="bg-amber-500 w-1/3 h-full animate-[pulse_2s_ease-in-out_infinite]" />
+              </div>
+              <div className="text-[11px] text-muted flex justify-between">
+                 <span>Reading #support...</span>
+                 <span>33%</span>
               </div>
            </div>
         </div>
