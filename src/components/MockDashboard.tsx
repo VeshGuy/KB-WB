@@ -1,4 +1,4 @@
-import { FileText, Database, ClipboardList, ShieldAlert, RefreshCw } from 'lucide-react';
+import { FileText, ClipboardList, ShieldAlert, RefreshCw } from 'lucide-react';
 
 export default function MockDashboard({ activeStep }: { activeStep: number }) {
   return (
@@ -58,7 +58,7 @@ export default function MockDashboard({ activeStep }: { activeStep: number }) {
            <div className="border border-line rounded-lg bg-white p-4 flex flex-col gap-3">
               <div className="flex justify-between items-center">
                  <div className="flex items-center gap-2">
-                    <Database className="w-5 h-5 text-indigo-500" />
+                    <img src="https://cdn.simpleicons.org/zendesk/03363D" alt="Zendesk" className="w-5 h-5" />
                     <span className="text-sm font-medium text-ink">Zendesk Ticketing</span>
                  </div>
                  <span className="text-[10px] font-bold text-indigo-600 bg-indigo-50 px-2 py-1 rounded">CONNECTED</span>
@@ -75,7 +75,7 @@ export default function MockDashboard({ activeStep }: { activeStep: number }) {
            <div className="border border-line rounded-lg bg-white p-4 flex flex-col gap-3">
               <div className="flex justify-between items-center">
                  <div className="flex items-center gap-2">
-                    <Database className="w-5 h-5 text-indigo-500" />
+                    <img src="https://cdn.simpleicons.org/salesforce/00A1E0" alt="Salesforce" className="w-5 h-5" />
                     <span className="text-sm font-medium text-ink">Salesforce CRM</span>
                  </div>
                  <span className="text-[10px] font-bold text-emerald-600 bg-emerald-50 px-2 py-1 rounded">SYNCED</span>
