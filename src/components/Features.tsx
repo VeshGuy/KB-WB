@@ -19,7 +19,7 @@ const features = [
   {
     icon: <History />,
     title: 'Full audit trail.',
-    description: 'Every action is logged: which procedure, which version, who approved it.'
+    description: 'Every action is logged. See exactly which procedure was used, which version, and who approved it.'
   }
 ];
 
