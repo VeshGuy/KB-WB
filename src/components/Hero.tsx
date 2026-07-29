@@ -1,7 +1,18 @@
+import { useEffect, useState } from 'react';
 import { ArrowRight, PlayCircle } from 'lucide-react';
 import WorkflowAnimation from './WorkflowAnimation';
+import MockDashboard from './MockDashboard';
 
 export default function Hero() {
+  const [activeStep, setActiveStep] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setActiveStep((prev) => (prev + 1) % 5);
+    }, 2500); // Increased to 2.5s so we can read the dashboard mockups
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <section className="relative pt-28 pb-32 text-center overflow-hidden">
       {/* Subtle Background Glow */}
@@ -46,13 +57,11 @@ export default function Hero() {
           <div className="relative rounded-2xl border border-line-strong bg-surface p-2 shadow-2xl shadow-ink/5 mx-auto max-w-[1040px]">
             <div className="absolute inset-0 bg-gradient-to-t from-paper/40 to-transparent rounded-2xl pointer-events-none" />
             <div className="flex flex-col md:flex-row gap-8 items-center bg-gray-50/50 p-8 rounded-xl border border-line-strong min-h-[400px]">
-              <div className="flex-1 w-full">
-                <WorkflowAnimation />
+              <div className="flex-1 w-full relative z-10">
+                <WorkflowAnimation activeStep={activeStep} />
               </div>
-              <div className="flex-1 w-full h-full min-h-[300px] border-2 border-dashed border-[#d1cec7] rounded-xl flex items-center justify-center bg-[#faf9f7] hover:bg-[#f0eee9] transition-colors">
-                <div className="text-[#a8a49c] font-mono text-sm uppercase tracking-widest font-semibold">
-                  [ Screenshot: Dashboard Overview ]
-                </div>
+              <div className="flex-[1.2] w-full h-full relative z-10">
+                <MockDashboard activeStep={activeStep} />
               </div>
             </div>
           </div>

@@ -1,4 +1,3 @@
-import { useEffect, useState } from 'react';
 import { FileText, Database, ClipboardList, UserCheck, Code } from 'lucide-react';
 
 const steps = [
@@ -9,16 +8,7 @@ const steps = [
   { id: 'skills', label: 'Skills Generated', icon: Code, badgeTone: 'emerald', badgeText: 'publishing' },
 ];
 
-export default function WorkflowAnimation() {
-  const [activeStep, setActiveStep] = useState(0);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setActiveStep((prev) => (prev + 1) % steps.length);
-    }, 1500); // 1.5 seconds per step
-    return () => clearInterval(interval);
-  }, []);
-
+export default function WorkflowAnimation({ activeStep }: { activeStep: number }) {
   return (
     <div className="w-full max-w-md mx-auto rounded-xl border border-line bg-surface shadow-xl font-sans text-left overflow-hidden">
       {/* MVP Style Header */}
