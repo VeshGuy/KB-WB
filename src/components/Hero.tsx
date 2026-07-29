@@ -60,7 +60,7 @@ export default function Hero() {
               <div className="flex-1 w-full relative z-10">
                 <WorkflowAnimation activeStep={activeStep} />
               </div>
-              <div className="flex-[1.2] w-full h-full relative z-10">
+              <div className="flex-[1.2] w-full h-[440px] relative z-10">
                 <MockDashboard activeStep={activeStep} />
               </div>
             </div>
