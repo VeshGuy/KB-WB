@@ -12,7 +12,7 @@ export default function MockAuditTrail() {
   }, []);
 
   return (
-    <div className="w-full max-w-xl mx-auto rounded-xl border border-line bg-surface shadow-xl font-sans text-left h-[460px] flex flex-col overflow-hidden">
+    <div className="w-full max-w-xl mx-auto rounded-xl border border-line bg-surface shadow-xl font-sans text-left h-[480px] flex flex-col overflow-hidden">
       {/* Header */}
       <div className="bg-paper border-b border-line px-5 py-4 flex items-center justify-between shrink-0">
         <div>
@@ -46,6 +46,13 @@ export default function MockAuditTrail() {
                 </li>
                 <li className="flex gap-3 text-sm">
                   <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-surface border border-line text-[11px] font-semibold text-muted">2</span>
+                  <div className="min-w-0">
+                    <div className="text-ink font-medium">Verify policy entitlement (30 days)</div>
+                    <div className="text-xs text-faint mt-0.5">tool_call · success</div>
+                  </div>
+                </li>
+                <li className="flex gap-3 text-sm">
+                  <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-surface border border-line text-[11px] font-semibold text-muted">3</span>
                   <div className="min-w-0">
                     <div className="text-ink font-medium">Generate refund authorization</div>
                     <div className="text-xs text-faint mt-0.5">tool_call · success</div>
@@ -84,6 +91,13 @@ export default function MockAuditTrail() {
                 <li className="flex gap-3 text-sm">
                   <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-surface border border-line text-[11px] font-semibold text-muted">2</span>
                   <div className="min-w-0">
+                    <div className="text-ink font-medium">Evaluate historical refund frequency</div>
+                    <div className="text-xs text-faint mt-0.5">tool_call · success</div>
+                  </div>
+                </li>
+                <li className="flex gap-3 text-sm">
+                  <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-surface border border-line text-[11px] font-semibold text-muted">3</span>
+                  <div className="min-w-0">
                     <div className="text-ink font-medium">Verify refund limits</div>
                     <div className="text-xs text-faint mt-0.5">rule_evaluation · threshold_exceeded</div>
                   </div>
@@ -115,12 +129,26 @@ export default function MockAuditTrail() {
                   <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-surface border border-line text-[11px] font-semibold text-muted">1</span>
                   <div className="min-w-0">
                     <div className="text-ink font-medium">Fetch FMCSA authority status</div>
+                    <div className="text-xs text-faint mt-0.5">tool_call · success</div>
+                  </div>
+                </li>
+                <li className="flex gap-3 text-sm">
+                  <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-surface border border-line text-[11px] font-semibold text-muted">2</span>
+                  <div className="min-w-0">
+                    <div className="text-ink font-medium">Verify safety rating</div>
+                    <div className="text-xs text-faint mt-0.5">tool_call · success</div>
+                  </div>
+                </li>
+                <li className="flex gap-3 text-sm">
+                  <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-surface border border-line text-[11px] font-semibold text-muted">3</span>
+                  <div className="min-w-0">
+                    <div className="text-ink font-medium">Cross-reference DOT database</div>
                     <div className="text-xs text-faint mt-0.5">tool_call · network_error</div>
                   </div>
                 </li>
               </ol>
               <div className="mt-4 border-t border-line pt-3 text-xs font-medium text-red-600 flex items-center">
-                <XCircle className="w-3 h-3 mr-1" /> API Timeout: FMCSA registry unresponsive.
+                <XCircle className="w-3 h-3 mr-1" /> API Timeout: DOT registry unresponsive.
               </div>
             </div>
           </div>
