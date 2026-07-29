@@ -2,11 +2,11 @@ import { useEffect, useState } from 'react';
 import { FileText, Database, ClipboardList, UserCheck, Code, ArrowRight } from 'lucide-react';
 
 const steps = [
-  { id: 'upload', label: '1. Upload Docs', icon: FileText, color: 'text-blue-500', bg: 'bg-blue-100', border: 'border-blue-200' },
-  { id: 'ingest', label: '2. Ingest Live Data', icon: Database, color: 'text-indigo-500', bg: 'bg-indigo-100', border: 'border-indigo-200' },
-  { id: 'produce', label: '3. Produce Procedures', icon: ClipboardList, color: 'text-purple-500', bg: 'bg-purple-100', border: 'border-purple-200' },
-  { id: 'approve', label: '4. Human Approval', icon: UserCheck, color: 'text-green-600', bg: 'bg-green-100', border: 'border-green-200' },
-  { id: 'skills', label: '5. Skills Generated', icon: Code, color: 'text-orange-500', bg: 'bg-orange-100', border: 'border-orange-200' },
+  { id: 'upload', label: 'Upload Docs', icon: FileText, badgeTone: 'blue', badgeText: 'running' },
+  { id: 'ingest', label: 'Ingest Live Data', icon: Database, badgeTone: 'indigo', badgeText: 'running' },
+  { id: 'produce', label: 'Produce Procedures', icon: ClipboardList, badgeTone: 'purple', badgeText: 'generating' },
+  { id: 'approve', label: 'Human Approval', icon: UserCheck, badgeTone: 'amber', badgeText: 'pending' },
+  { id: 'skills', label: 'Skills Generated', icon: Code, badgeTone: 'emerald', badgeText: 'publishing' },
 ];
 
 export default function WorkflowAnimation() {
@@ -20,43 +20,61 @@ export default function WorkflowAnimation() {
   }, []);
 
   return (
-    <div className="relative w-full max-w-md mx-auto p-6 bg-white/80 backdrop-blur-xl rounded-3xl border border-[#e6e4df] shadow-2xl overflow-hidden">
-      <div className="text-sm font-bold text-[#1c1a17] mb-6 uppercase tracking-wider">Kaybi Generation Pipeline</div>
+    <div className="w-full max-w-md mx-auto rounded-xl border border-line bg-surface shadow-xl font-sans text-left overflow-hidden">
+      {/* MVP Style Header */}
+      <div className="bg-paper border-b border-line px-5 py-4 flex items-center justify-between shrink-0">
+        <div>
+          <h3 className="font-bold text-ink">Pipeline Status</h3>
+          <p className="text-xs text-muted">Real-time generation workflow</p>
+        </div>
+      </div>
       
-      <div className="relative flex flex-col gap-4">
-        {/* Connection Line */}
-        <div className="absolute left-[23px] top-8 bottom-8 w-0.5 bg-gray-200 z-0" />
+      <div className="relative flex flex-col p-6">
+        {/* Connection Line: Centered precisely at 1.5rem (left-6) + 24px (half of w-12) - 1px (half of line width) = 23px */}
+        <div className="absolute left-[47px] top-10 bottom-10 w-0.5 bg-line z-0" />
         
         {steps.map((step, idx) => {
           const isActive = idx === activeStep;
           const isPast = idx < activeStep;
           const Icon = step.icon;
 
+          // Color logic without CSS opacity (so line doesn't bleed through)
+          const circleBg = isActive ? 'bg-white shadow-md border-ink' : isPast ? 'bg-surface border-line' : 'bg-surface border-transparent';
+          const iconColor = isActive ? 'text-ink' : isPast ? 'text-muted' : 'text-faint';
+          const textColor = isActive ? 'text-ink font-semibold' : isPast ? 'text-muted' : 'text-faint';
+
           return (
             <div 
               key={step.id} 
-              className={`relative z-10 flex items-center gap-4 transition-all duration-500 ${
-                isActive ? 'opacity-100 translate-x-2' : isPast ? 'opacity-50' : 'opacity-30'
-              }`}
+              className={`relative z-10 flex items-center gap-4 transition-all duration-500 py-3 ${isActive ? 'translate-x-1' : ''}`}
             >
+              {/* Circle */}
               <div 
-                className={`w-12 h-12 rounded-full flex items-center justify-center border-2 transition-all duration-500 bg-white ${
-                  isActive ? `${step.bg} ${step.border} scale-110 shadow-lg` : 'border-gray-200'
-                }`}
+                className={`w-12 h-12 shrink-0 rounded-full flex items-center justify-center border-2 transition-all duration-500 ${circleBg} ${isActive ? 'scale-105' : ''}`}
               >
-                <Icon className={`w-5 h-5 ${isActive ? step.color : 'text-gray-400'}`} />
+                <Icon className={`w-5 h-5 transition-colors duration-500 ${iconColor}`} />
               </div>
               
-              <div className={`flex-1 p-3 rounded-xl border transition-all duration-500 ${
-                isActive ? 'bg-white border-[#e6e4df] shadow-sm' : 'bg-transparent border-transparent'
-              }`}>
-                <span className={`font-semibold text-sm ${isActive ? '#1c1a17' : 'text-gray-500'}`}>
+              {/* Content */}
+              <div className={`flex-1 flex items-center justify-between transition-all duration-500`}>
+                <span className={`text-sm ${textColor} transition-colors duration-500`}>
                   {step.label}
                 </span>
-                {isActive && (
-                  <div className="mt-1 flex items-center text-xs text-gray-500 animate-fade-up">
-                    Processing <ArrowRight className="w-3 h-3 ml-1 animate-pulse" />
-                  </div>
+                
+                {/* MVP Style Badge for active state */}
+                <div className={`transition-all duration-300 ${isActive ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-1 overflow-hidden h-0'}`}>
+                  {isActive && (
+                    <span className={`inline-flex items-center px-2 py-0.5 rounded text-[11px] font-semibold bg-emerald-100 text-emerald-700 animate-pulse`}>
+                      {step.badgeText}
+                    </span>
+                  )}
+                </div>
+                
+                {/* Completed Check for past states */}
+                {isPast && (
+                  <span className="text-[11px] font-semibold text-muted">
+                    done
+                  </span>
                 )}
               </div>
             </div>
