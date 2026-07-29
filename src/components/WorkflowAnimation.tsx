@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { FileText, Database, ClipboardList, UserCheck, Code, ArrowRight } from 'lucide-react';
+import { FileText, Database, ClipboardList, UserCheck, Code } from 'lucide-react';
 
 const steps = [
   { id: 'upload', label: 'Upload Docs', icon: FileText, badgeTone: 'blue', badgeText: 'running' },
