@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { ChevronRight, CheckCircle2 } from 'lucide-react';
+import { ChevronRight, CheckCircle2, AlertCircle, XCircle } from 'lucide-react';
 
 export default function MockAuditTrail() {
   const [expanded, setExpanded] = useState(false);
@@ -22,10 +22,10 @@ export default function MockAuditTrail() {
         </div>
       </div>
 
-      {/* Row 1 (Expanding) */}
+      {/* Row 1 (Expanding) - Success */}
       <div>
         <div className="flex items-center gap-3 px-5 py-3.5 hover:bg-paper cursor-default transition-colors">
-          <ChevronRight className={`w-4 h-4 text-faint transition-transform duration-500 ${expanded ? 'rotate-90' : ''}`} />
+          <ChevronRight className={`w-4 h-4 text-faint transition-transform duration-200 ${expanded ? 'rotate-90' : ''}`} />
           <CheckCircle2 className="w-4 h-4 text-emerald-500" />
           <div className="min-w-0 flex-1">
             <div className="truncate text-sm font-medium text-ink">
@@ -41,8 +41,8 @@ export default function MockAuditTrail() {
           <span className="w-12 text-right text-xs text-faint">2m ago</span>
         </div>
 
-        {/* Expanded Content */}
-        <div className={`overflow-hidden transition-all duration-700 ease-in-out ${expanded ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'}`}>
+        {/* Expanded Content (Faster animation) */}
+        <div className={`overflow-hidden transition-all duration-300 ease-in-out ${expanded ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'}`}>
           <div className="border-t border-line bg-paper px-6 py-4">
             <ol className="space-y-3">
               <li className="flex gap-3 text-sm">
@@ -80,23 +80,43 @@ export default function MockAuditTrail() {
         </div>
       </div>
 
-      {/* Row 2 (Static) */}
+      {/* Row 2 (Static) - Escalated */}
       <div className="border-t border-line">
         <div className="flex items-center gap-3 px-5 py-3.5 hover:bg-paper cursor-default">
           <ChevronRight className="w-4 h-4 text-faint" />
-          <CheckCircle2 className="w-4 h-4 text-emerald-500" />
+          <AlertCircle className="w-4 h-4 text-amber-500" />
+          <div className="min-w-0 flex-1">
+            <div className="truncate text-sm font-medium text-ink">
+              Process Refund #REF-9912
+            </div>
+            <div className="text-xs text-faint mt-0.5">
+              support_escalation · v1.5 · 1.4s
+            </div>
+          </div>
+          <span className="inline-flex items-center px-2 py-0.5 rounded text-[11px] font-semibold bg-amber-100 text-amber-700">
+            escalated
+          </span>
+          <span className="w-12 text-right text-xs text-faint">15m ago</span>
+        </div>
+      </div>
+
+      {/* Row 3 (Static) - Failed */}
+      <div className="border-t border-line">
+        <div className="flex items-center gap-3 px-5 py-3.5 hover:bg-paper cursor-default">
+          <ChevronRight className="w-4 h-4 text-faint" />
+          <XCircle className="w-4 h-4 text-red-500" />
           <div className="min-w-0 flex-1">
             <div className="truncate text-sm font-medium text-ink">
               Vet Carrier MC# 839201
             </div>
             <div className="text-xs text-faint mt-0.5">
-              carrier_onboarding · v2.0 · 1.2s
+              carrier_onboarding · v2.0 · 302ms
             </div>
           </div>
-          <span className="inline-flex items-center px-2 py-0.5 rounded text-[11px] font-semibold bg-emerald-100 text-emerald-700">
-            success
+          <span className="inline-flex items-center px-2 py-0.5 rounded text-[11px] font-semibold bg-red-100 text-red-700">
+            failed
           </span>
-          <span className="w-12 text-right text-xs text-faint">15m ago</span>
+          <span className="w-12 text-right text-xs text-faint">1h ago</span>
         </div>
       </div>
     </div>
