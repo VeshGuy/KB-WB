@@ -1,25 +1,25 @@
-import { FileCode2, Workflow, ShieldCheck, TerminalSquare } from 'lucide-react';
+import { Link, AlertCircle, UserCheck, History } from 'lucide-react';
 
 const features = [
   {
-    icon: <FileCode2 />,
-    title: 'Deterministic execution.',
-    description: 'Transform ambiguous agent goals into hard-coded skill sets. Kaybi restricts the agent to pre-approved APIs, preventing hallucinated actions.'
+    icon: <Link />,
+    title: 'One connected playbook.',
+    description: 'Change a rule once and it updates everywhere it applies.'
   },
   {
-    icon: <ShieldCheck />,
-    title: 'Human-in-the-loop.',
-    description: 'High-risk operations automatically pause for manual review. Your compliance team signs off before the database is ever touched.'
+    icon: <AlertCircle />,
+    title: 'Always current.',
+    description: 'It flags outdated or conflicting procedures instead of letting your AI follow the wrong version.'
   },
   {
-    icon: <Workflow />,
-    title: 'Visual process mapping.',
-    description: 'Map out your standard operating procedures visually. Kaybi compiles these workflows into strict constraints for the LLM.'
+    icon: <UserCheck />,
+    title: 'Approved by a human.',
+    description: 'A manager approves each procedure once. Nothing goes live on a guess.'
   },
   {
-    icon: <TerminalSquare />,
-    title: 'Cryptographic audit trails.',
-    description: 'Every action is logged immutably. Export SOC2 and ISO compliant reports detailing exactly why an agent took an action.'
+    icon: <History />,
+    title: 'Full audit trail.',
+    description: 'Every action is logged: which procedure, which version, who approved it.'
   }
 ];
 

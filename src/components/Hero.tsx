@@ -11,19 +11,19 @@ export default function Hero() {
         
         {/* Badge */}
         <div className="inline-flex items-center px-4 py-1.5 rounded-full bg-surface border border-line-strong mb-8 text-sm font-semibold text-muted shadow-sm hover:shadow-md transition-shadow cursor-default">
-          <span className="text-accent-ink mr-2">Kaybi v2.0 is live</span>
+          <span className="text-accent-ink mr-2">Kaybi is live</span>
           <span className="text-faint mx-2">|</span>
-          <span>The new standard in agent governance</span>
+          <span>Built for ops-heavy teams</span>
         </div>
 
         {/* Heading */}
         <h1 className="text-6xl md:text-[5rem] max-w-[900px] mx-auto font-bold font-serif text-ink leading-[1.05] tracking-tight mb-8">
-          The <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent-ink to-teal-400">control layer</span> for AI agents.
+          AI that runs your operations <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent-ink to-teal-400">the right way</span> — every time.
         </h1>
 
         {/* Subtitle */}
         <p className="text-xl md:text-2xl text-muted max-w-[650px] mx-auto mb-12 leading-relaxed">
-          Agents that can't go off-script — because they run your approved playbooks, not their own guesses. Put AI agents in production without the liability.
+          Your AI follows your approved procedures — step by step, every time — instead of improvising. And you can see exactly what it did.
         </p>
 
         {/* CTAs */}
@@ -34,6 +34,11 @@ export default function Hero() {
           <a href="#demo" className="inline-flex items-center justify-center px-7 py-3.5 rounded-xl text-base font-semibold bg-surface text-ink border border-line-strong hover:bg-paper hover:border-muted shadow-sm hover:shadow-md transition-all duration-200">
             <PlayCircle className="w-5 h-5 mr-2 text-muted" /> Watch Demo
           </a>
+        </div>
+
+        {/* Not a chatbot beat */}
+        <div className="mt-8 text-sm text-muted font-medium bg-surface/50 border border-line-strong inline-block px-5 py-2.5 rounded-xl">
+          A chatbot answers questions when asked. Kaybi makes sure the work runs the right way — whether anyone asks or not.
         </div>
         
         {/* Hero Image Container */}

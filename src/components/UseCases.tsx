@@ -1,10 +1,10 @@
-import { Shield, Briefcase, RefreshCcw } from 'lucide-react';
+import { Headset, Briefcase, RefreshCcw } from 'lucide-react';
 
 const useCases = [
   {
-    icon: <Shield className="w-7 h-7" />,
-    title: 'Trust & Safety / Compliance Ops',
-    description: 'Account suspensions, AUP enforcement, and DMCA takedowns require absolute precision. We ensure your agents follow the legal playbook to the letter and log the approving officer.'
+    icon: <Headset className="w-7 h-7" />,
+    title: 'Customer Support Ops',
+    description: 'Refunds, escalations, and entitlement checks follow your policy exactly, with a sign-off gate on anything risky.'
   },
   {
     icon: <RefreshCcw className="w-7 h-7" />,
@@ -25,10 +25,10 @@ export default function UseCases() {
         
         <div className="text-center mb-24 animate-fade-up">
           <h2 className="text-4xl md:text-[3rem] font-bold font-serif text-ink mb-6 tracking-tight">
-            Built for <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent-ink to-teal-500">regulated operations.</span>
+            Built for <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent-ink to-teal-500">ops-heavy businesses.</span>
           </h2>
           <p className="text-lg text-muted max-w-[650px] mx-auto leading-relaxed">
-            Where "move fast and break things" isn't an option. Perfect for environments where actions carry compliance and financial risk.
+            Perfect for environments where every step matters and consistency is critical.
           </p>
         </div>
         
