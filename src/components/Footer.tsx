@@ -1,4 +1,4 @@
-import { ShieldCheck, Mail, Globe, MessageCircle } from 'lucide-react';
+import { BookOpen, Mail, Globe, MessageCircle } from 'lucide-react';
 
 export default function Footer() {
   return (
@@ -7,12 +7,14 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
           
           <div className="md:col-span-1">
-            <div className="flex items-center gap-2 mb-6">
-              <ShieldCheck className="w-6 h-6 text-accent-ink" />
-              <span className="text-xl font-bold font-serif text-ink tracking-tight">Kaybi</span>
+            <div className="flex items-center gap-2 mb-6 group cursor-pointer">
+              <div className="w-10 h-10 rounded-xl bg-accent-weak flex items-center justify-center text-accent-ink group-hover:bg-accent-ink group-hover:text-white transition-colors duration-300">
+                <BookOpen className="w-6 h-6" />
+              </div>
+              <span className="text-2xl font-bold font-serif text-ink tracking-tight">Kaybi</span>
             </div>
-            <p className="text-muted text-sm leading-relaxed mb-6">
-              The control layer for AI agents. Approved procedures in, audit trail out.
+            <p className="text-muted text-base max-w-[320px] leading-relaxed mb-6">
+              The playbook your AI runs on. Approved procedures in, every action logged.
             </p>
             <div className="flex gap-4">
               <a href="#" className="text-faint hover:text-accent-ink transition-colors"><Mail className="w-5 h-5" /></a>

@@ -1,4 +1,4 @@
-import { Headset, Briefcase, RefreshCcw } from 'lucide-react';
+import { Headset, Truck, RefreshCcw } from 'lucide-react';
 
 const useCases = [
   {
@@ -9,12 +9,12 @@ const useCases = [
   {
     icon: <RefreshCcw className="w-7 h-7" />,
     title: 'B2B Returns & RMA Management',
-    description: 'Turn complex 18-brand manufacturer-routing lookup tables into executable agent instructions. Automate exception handling with built-in financial approval gates.'
+    description: 'Turn tangled, per-brand return rules into a procedure your team and your AI follow exactly, with an approval gate on anything that costs money.'
   },
   {
-    icon: <Briefcase className="w-7 h-7" />,
-    title: 'Logistics & Carrier Onboarding',
-    description: 'Vet carriers against 6-month authority rules and cargo minimums securely. Automatically collect and verify W-9s and COIs without risking a compliance breach.'
+    icon: <Truck className="w-7 h-7" />,
+    title: 'Freight & Carrier Onboarding',
+    description: 'Vet carriers against your authority and insurance rules, and collect and verify their paperwork the same way every time, instead of it living in one person head.'
   }
 ];
 

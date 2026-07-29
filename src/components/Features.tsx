@@ -28,7 +28,7 @@ export default function Features() {
     <section className="py-32 px-6 bg-white relative">
       <div className="max-w-[1200px] mx-auto">
         <h2 className="text-4xl md:text-5xl font-black text-[#1c1a17] mb-24 text-center">
-          Operations, secured.
+          How Kaybi keeps your operations on track
         </h2>
         
         <div className="flex flex-col gap-32">
@@ -56,7 +56,7 @@ export default function Features() {
                     </div>
                   </div>
                   {/* Decorative glow behind placeholder */}
-                  <div className="absolute -inset-4 bg-gradient-to-r from-orange-500/5 to-yellow-500/5 rounded-[2rem] blur-2xl -z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                  <div className="absolute -inset-4 bg-gradient-to-r from-teal-500/5 to-accent-ink/5 rounded-[2rem] blur-2xl -z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                 </div>
 
               </div>

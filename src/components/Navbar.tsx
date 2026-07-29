@@ -1,4 +1,4 @@
-import { ShieldCheck } from 'lucide-react';
+import { BookOpen } from 'lucide-react';
 
 export default function Navbar() {
   return (
@@ -8,7 +8,7 @@ export default function Navbar() {
         {/* Logo */}
         <div className="flex items-center gap-2 cursor-pointer hover:animate-nav-pop group">
           <div className="bg-accent-weak p-1.5 rounded-lg">
-            <ShieldCheck className="w-6 h-6 text-accent-ink group-hover:scale-110 transition-transform duration-200" />
+            <BookOpen className="w-6 h-6 text-accent-ink group-hover:scale-110 transition-transform duration-200" />
           </div>
           <span className="text-xl font-bold font-serif text-ink tracking-tight">Kaybi</span>
         </div>
