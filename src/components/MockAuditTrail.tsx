@@ -17,7 +17,6 @@ export default function MockAuditTrail() {
       <div className="bg-paper border-b border-line px-5 py-4 flex items-center justify-between shrink-0">
         <div>
           <h3 className="font-bold text-ink">Activity log</h3>
-          <p className="text-xs text-muted">Every action, step, and approval.</p>
         </div>
       </div>
 
