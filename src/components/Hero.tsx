@@ -35,7 +35,7 @@ export default function Hero() {
 
         {/* Subtitle */}
         <p className="text-xl md:text-2xl text-muted max-w-[700px] mx-auto mb-12 leading-relaxed">
-          Kaybi holds your company's operations in one place, so your AI doesn't go Oops!
+          Kaybi holds your company's operations in one place, so your AI doesn't go <span className="text-[#10b981] font-medium">Oops!</span>
         </p>
 
         {/* CTAs */}
