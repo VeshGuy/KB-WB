@@ -154,7 +154,7 @@ export default function NetworkUpdateAnimation() {
           <g transform="translate(90, 125)">
             <g className="animate-node-pop" style={{ opacity: 0, animationDelay: '1.2s', transformOrigin: 'center' }}>
               <circle cx="0" cy="0" r="16" fill="white" />
-              <image href="https://cdn.simpleicons.org/adobeacrobatreader/EC1C24" x="-8" y="-8" width="16" height="16" />
+              <image href="https://upload.wikimedia.org/wikipedia/commons/8/87/PDF_file_icon.svg" x="-8" y="-8" width="16" height="16" />
             </g>
           </g>
           {/* n8n App Node between 500,90 and 540,160 (Midpoint: 520, 125) */}
