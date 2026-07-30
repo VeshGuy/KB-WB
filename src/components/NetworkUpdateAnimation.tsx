@@ -78,11 +78,6 @@ export default function NetworkUpdateAnimation() {
         </g>
 
         {/* Animated Edges (Growing from the apps to join the new central node at 300,170) */}
-        <line x1="200" y1="125" x2="300" y2="170" 
-          stroke="#10b981" strokeWidth="2" 
-          strokeDasharray="150" strokeDashoffset="150"
-          className="animate-edge-1"
-        />
         <line x1="210" y1="215" x2="300" y2="170" 
           stroke="#10b981" strokeWidth="2" 
           strokeDasharray="150" strokeDashoffset="150"
