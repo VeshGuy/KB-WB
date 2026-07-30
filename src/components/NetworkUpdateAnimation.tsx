@@ -42,6 +42,12 @@ export default function NetworkUpdateAnimation() {
         .animate-edge-4 {
           animation: drawLine 0.8s ease-out 1.4s forwards, pulseGlow 2s ease-in-out 1.4s infinite alternate;
         }
+        .animate-edge-5 {
+          animation: drawLine 0.8s ease-out 1.2s forwards, pulseGlow 2s ease-in-out 1.2s infinite alternate;
+        }
+        .animate-edge-6 {
+          animation: drawLine 0.8s ease-out 1.4s forwards, pulseGlow 2s ease-in-out 1.4s infinite alternate;
+        }
       `}</style>
       
       <svg className="absolute inset-0 w-full h-full" viewBox="0 0 600 340">
@@ -94,6 +100,18 @@ export default function NetworkUpdateAnimation() {
           className="animate-edge-4"
         />
 
+        {/* Animated Edges between peripheral nodes (PDF and n8n) */}
+        <line x1="100" y1="80" x2="80" y2="170" 
+          stroke="#10b981" strokeWidth="2" 
+          strokeDasharray="150" strokeDashoffset="150"
+          className="animate-edge-5"
+        />
+        <line x1="500" y1="90" x2="540" y2="160" 
+          stroke="#10b981" strokeWidth="2" 
+          strokeDasharray="150" strokeDashoffset="150"
+          className="animate-edge-6"
+        />
+
         {/* Structural Blank Nodes (End points) */}
         <g stroke="#a5b4fc" strokeWidth="2" fill="white">
           <circle cx="100" cy="80" r="8" />
@@ -131,6 +149,16 @@ export default function NetworkUpdateAnimation() {
           <g transform="translate(390, 220)">
             <circle cx="0" cy="0" r="16" fill="white" />
             <image href="https://cdn.simpleicons.org/googlesheets/34A853" x="-8" y="-8" width="16" height="16" />
+          </g>
+          {/* PDF App Node between 100,80 and 80,170 (Midpoint: 90, 125) */}
+          <g transform="translate(90, 125)">
+            <circle cx="0" cy="0" r="16" fill="white" />
+            <image href="https://upload.wikimedia.org/wikipedia/commons/8/87/PDF_file_icon.svg" x="-8" y="-8" width="16" height="16" />
+          </g>
+          {/* n8n App Node between 500,90 and 540,160 (Midpoint: 520, 125) */}
+          <g transform="translate(520, 125)">
+            <circle cx="0" cy="0" r="16" fill="white" />
+            <image href="https://cdn.simpleicons.org/n8n/EA4B71" x="-8" y="-8" width="16" height="16" />
           </g>
         </g>
 
