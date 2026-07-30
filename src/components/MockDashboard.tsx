@@ -182,7 +182,6 @@ export default function MockDashboard({ activeStep }: { activeStep: number }) {
         <div className="bg-paper border-b border-line px-5 py-4 flex items-center justify-between">
           <div>
             <h3 className="font-bold text-ink">Approvals</h3>
-            <p className="text-xs text-muted">Awaiting review</p>
           </div>
           <span className="flex h-5 w-5 items-center justify-center rounded-full bg-amber-100 text-[11px] font-bold text-amber-700">1</span>
         </div>
@@ -230,11 +229,14 @@ export default function MockDashboard({ activeStep }: { activeStep: number }) {
                  </div>
               </div>
               
-              <div className="p-3 border-t border-line bg-surface flex gap-3">
-                 <button className="flex-1 bg-ink text-white font-semibold text-xs py-2 rounded-lg hover:bg-black transition-colors">
-                   Approve & Deploy
+              <div className="p-3 border-t border-line bg-surface flex gap-2">
+                 <button className="px-4 bg-white border border-line text-ink font-semibold text-xs py-2 rounded-lg hover:bg-paper transition-colors">
+                   Edit
                  </button>
-                 <button className="flex-1 bg-white border border-line text-ink font-semibold text-xs py-2 rounded-lg hover:bg-paper transition-colors">
+                 <button className="flex-1 bg-ink text-white font-semibold text-xs py-2 rounded-lg hover:bg-black transition-colors">
+                   Approve
+                 </button>
+                 <button className="px-4 bg-white border border-line text-ink font-semibold text-xs py-2 rounded-lg hover:bg-paper transition-colors">
                    Reject
                  </button>
               </div>
