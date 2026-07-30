@@ -1,11 +1,12 @@
 import { Link, AlertCircle, UserCheck, History } from 'lucide-react';
 import MockAuditTrail from './MockAuditTrail';
+import NetworkUpdateAnimation from './NetworkUpdateAnimation';
 
 const features = [
   {
     icon: <Link />,
-    title: 'One connected playbook.',
-    description: 'Change a rule once and it updates everywhere it applies.'
+    title: 'One connected layer.',
+    description: 'Change once and it updates everywhere it applies.'
   },
   {
     icon: <AlertCircle />,
@@ -54,6 +55,10 @@ export default function Features() {
                   {feature.title === 'Full audit trail.' ? (
                     <div className="w-full flex items-center justify-center transition-transform duration-500 group-hover:scale-[1.02]">
                       <MockAuditTrail />
+                    </div>
+                  ) : feature.title === 'One connected layer.' ? (
+                    <div className="w-full flex items-center justify-center transition-transform duration-500 group-hover:scale-[1.02]">
+                      <NetworkUpdateAnimation />
                     </div>
                   ) : (
                     <div className="w-full aspect-video rounded-2xl border-2 border-dashed border-[#d1cec7] bg-[#faf9f7] flex items-center justify-center transition-all duration-300 group-hover:bg-[#f0eee9] group-hover:border-[#1c1a17]/20">
