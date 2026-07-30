@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { ArrowRight } from 'lucide-react';
 import WorkflowAnimation from './WorkflowAnimation';
 import MockDashboard from './MockDashboard';
+import NetworkBackground from './NetworkBackground';
 
 export default function Hero() {
   const [activeStep, setActiveStep] = useState(0);
@@ -15,19 +16,26 @@ export default function Hero() {
 
   return (
     <section className="relative pt-28 pb-32 text-center overflow-hidden">
+      <NetworkBackground />
       {/* Subtle Background Glow */}
       <div className="absolute top-[-20%] left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-accent-weak/50 rounded-full blur-[100px] pointer-events-none -z-10" />
 
       <div className="max-w-[1100px] mx-auto px-6 animate-fade-up">
         
         {/* Heading */}
-        <h1 className="text-6xl md:text-[5rem] max-w-[900px] mx-auto font-bold font-serif text-ink leading-[1.05] tracking-tight mb-8 mt-12">
-          The Operations Context Layer your AI <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent-ink to-teal-400">needs before it acts.</span>
+        <h1 className="text-6xl md:text-[5rem] max-w-[1000px] mx-auto font-bold font-serif text-ink leading-[1.05] tracking-tight mb-8 mt-12">
+          The <span className="relative inline-block whitespace-nowrap">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent-ink to-teal-400">Operations Context Layer</span>
+            <svg className="absolute -bottom-1 left-0 w-full h-4 text-teal-400/80" viewBox="0 0 200 15" fill="none" preserveAspectRatio="none">
+              <path d="M 2 12 Q 50 2 100 8 T 198 12" stroke="currentColor" strokeWidth="3" strokeLinecap="round"/>
+            </svg>
+          </span>
+          <br className="hidden md:block" /> your AI needs before it acts.
         </h1>
 
         {/* Subtitle */}
         <p className="text-xl md:text-2xl text-muted max-w-[700px] mx-auto mb-12 leading-relaxed">
-          Kaybi holds your company's approved operations in one place, so your AI works from your real procedures—not guesses—every time.
+          Kaybi holds your company's operations in one place, so your AI works from your real procedures & does not guess.
         </p>
 
         {/* CTAs */}
