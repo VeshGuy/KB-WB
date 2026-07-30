@@ -10,7 +10,7 @@ export default function Navbar() {
           <div className="bg-accent-weak p-1.5 rounded-lg">
             <BookOpen className="w-6 h-6 text-accent-ink group-hover:scale-110 transition-transform duration-200" />
           </div>
-          <span className="text-xl font-bold font-serif text-ink tracking-tight">Kaybi</span>
+          <span className="font-serif text-2xl font-semibold tracking-tight text-ink">kaybi</span>
         </div>
 
         {/* Navigation */}

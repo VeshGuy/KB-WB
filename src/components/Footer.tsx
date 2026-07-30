@@ -9,7 +9,7 @@ export default function Footer() {
             <div className="w-10 h-10 rounded-xl bg-accent-weak flex items-center justify-center text-accent-ink group-hover:bg-accent-ink group-hover:text-white transition-colors duration-300">
               <BookOpen className="w-6 h-6" />
             </div>
-            <span className="text-2xl font-bold font-serif text-ink tracking-tight">Kaybi</span>
+            <span className="font-serif text-2xl font-semibold tracking-tight text-ink">kaybi</span>
           </div>
           <p className="text-muted text-base max-w-[320px] leading-relaxed">
             The playbook your AI runs on. Approved procedures in, every action logged.
