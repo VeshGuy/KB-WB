@@ -46,35 +46,35 @@ export default function MockConflictCard() {
       {/* Main Conflict Content */}
       <div className="p-5 flex flex-col gap-3 animate-conflict-content relative z-10">
         <div className="flex gap-2 items-center">
-          <span className="px-2 py-1 rounded bg-red-50 text-red-700 text-[10px] font-semibold border border-red-100">Blocks a procedure</span>
+          <span className="px-2 py-1 rounded bg-orange-50 text-orange-700 text-[10px] font-semibold border border-orange-100">Contradicts a fact</span>
           <span className="px-2 py-1 rounded bg-surface text-muted text-[10px] font-semibold border border-line">high confidence</span>
         </div>
         
         <p className="text-sm font-bold text-ink leading-snug pr-4">
-          New fact "Carrier outage" contradicts the procedure "Overnight Shipping"
+          New memo contradicts the active return policy
         </p>
         
         <p className="text-xs text-muted leading-relaxed">
-          If you do not block this procedure the AI will keep promising next day delivery to customers. This will result in massive refund costs and complaints due to the current carrier outage.
+          The newly uploaded memo states that all returns require a restocking fee. The active SOP states that returns are always free. The AI will give contradictory answers to customers if this is not resolved.
         </p>
         
         <div className="bg-[#faf9f7] rounded-md p-3 mt-1 border border-line text-[11px] text-ink leading-relaxed">
-          <span className="font-bold">Recommendation to avoid refunds</span>
+          <span className="font-bold">Recommendation to avoid confusion</span>
           <br />
-          Block the overnight shipping procedure and force the AI to only offer standard ground shipping until the carrier is back online.
+          Replace the old SOP rule with the new restocking fee policy to ensure the AI gives correct information.
         </div>
         
         <div className="flex gap-3 mt-2">
           <div className="relative">
             <button className="bg-teal-600 text-white px-4 py-2 rounded-lg text-xs font-semibold shadow-sm animate-btn-conflict transition-colors">
-              Approve block
+              Approve and replace old
             </button>
             <div className="absolute top-1/2 left-1/2 pointer-events-none animate-mouse-conflict origin-top-left">
               <MousePointer2 className="w-5 h-5 fill-black text-white drop-shadow-md" />
             </div>
           </div>
           <button className="bg-white text-ink border border-line px-4 py-2 rounded-lg text-xs font-semibold hover:bg-surface transition-colors">
-            Reject
+            Reject new
           </button>
         </div>
       </div>
@@ -85,7 +85,7 @@ export default function MockConflictCard() {
           <CheckCircle2 className="w-6 h-6 text-teal-600" />
         </div>
         <p className="text-sm font-bold text-ink text-center">Conflict Resolved</p>
-        <p className="text-xs text-muted text-center mt-1">Overnight shipping is now blocked. The AI will safely route all orders to ground shipping.</p>
+        <p className="text-xs text-muted text-center mt-1">The old return policy has been replaced. The AI will now enforce the restocking fee.</p>
       </div>
     </div>
   );
