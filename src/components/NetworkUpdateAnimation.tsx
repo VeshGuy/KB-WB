@@ -53,69 +53,65 @@ export default function NetworkUpdateAnimation() {
 
         {/* Existing Edges */}
         <g stroke="#a5b4fc" strokeWidth="1.5">
-          <line x1="100" y1="80" x2="220" y2="160" />
-          <line x1="120" y1="260" x2="220" y2="160" />
-          <line x1="500" y1="90" x2="400" y2="200" />
-          <line x1="480" y1="270" x2="400" y2="200" />
+          <line x1="100" y1="80" x2="300" y2="170" />
+          <line x1="120" y1="260" x2="300" y2="170" />
+          <line x1="500" y1="90" x2="300" y2="170" />
+          <line x1="480" y1="270" x2="300" y2="170" />
         </g>
 
         {/* Animated Edges (shooting FROM 300, 170 to existing nodes) */}
-        <line x1="300" y1="170" x2="220" y2="160" 
+        <line x1="300" y1="170" x2="100" y2="80" 
           stroke="#10b981" strokeWidth="2" 
-          strokeDasharray="100" strokeDashoffset="100"
+          strokeDasharray="250" strokeDashoffset="250"
           className="animate-draw-line animate-glow"
           style={{ animationDelay: '0.6s' }}
-        />
-        <line x1="300" y1="170" x2="400" y2="200" 
-          stroke="#10b981" strokeWidth="2" 
-          strokeDasharray="120" strokeDashoffset="120"
-          className="animate-draw-line animate-glow"
-          style={{ animationDelay: '0.8s' }}
         />
         <line x1="300" y1="170" x2="120" y2="260" 
           stroke="#10b981" strokeWidth="2" 
           strokeDasharray="250" strokeDashoffset="250"
           className="animate-draw-line animate-glow"
-          style={{ animationDelay: '1.0s' }}
+          style={{ animationDelay: '0.8s' }}
         />
         <line x1="300" y1="170" x2="500" y2="90" 
           stroke="#10b981" strokeWidth="2" 
           strokeDasharray="250" strokeDashoffset="250"
           className="animate-draw-line animate-glow"
-          style={{ animationDelay: '1.2s' }}
+          style={{ animationDelay: '1.0s' }}
         />
-        <line x1="300" y1="170" x2="100" y2="80" 
+        <line x1="300" y1="170" x2="480" y2="270" 
           stroke="#10b981" strokeWidth="2" 
           strokeDasharray="250" strokeDashoffset="250"
           className="animate-draw-line animate-glow"
-          style={{ animationDelay: '1.4s' }}
+          style={{ animationDelay: '1.2s' }}
         />
 
-        {/* Structural Joints */}
-        <g stroke="#a5b4fc" strokeWidth="1.5" fill="white">
-          <circle cx="220" cy="160" r="3" />
-          <circle cx="400" cy="200" r="3" />
+        {/* Structural Blank Nodes (now bigger as requested) */}
+        <g stroke="#a5b4fc" strokeWidth="2" fill="white">
+          <circle cx="100" cy="80" r="8" />
+          <circle cx="120" cy="260" r="8" />
+          <circle cx="500" cy="90" r="8" />
+          <circle cx="480" cy="270" r="8" />
         </g>
 
-        {/* Existing Logo Nodes */}
+        {/* App Logos placed ON THE EDGES (Lines) */}
         <g filter="url(#nodeShadowSmall)">
-          {/* Salesforce */}
-          <g transform="translate(100, 80)">
+          {/* Salesforce on the line between 100,80 and 300,170 (Midpoint: 200, 125) */}
+          <g transform="translate(200, 125)">
             <circle cx="0" cy="0" r="16" fill="white" />
             <image href="https://upload.wikimedia.org/wikipedia/commons/f/f9/Salesforce.com_logo.svg" x="-8" y="-8" width="16" height="16" />
           </g>
-          {/* Notion */}
-          <g transform="translate(120, 260)">
+          {/* Notion on the line between 120,260 and 300,170 (Midpoint: 210, 215) */}
+          <g transform="translate(210, 215)">
             <circle cx="0" cy="0" r="16" fill="white" />
             <image href="https://upload.wikimedia.org/wikipedia/commons/e/e9/Notion-logo.svg" x="-8" y="-8" width="16" height="16" />
           </g>
-          {/* Slack */}
-          <g transform="translate(500, 90)">
+          {/* Slack on the line between 500,90 and 300,170 (Midpoint: 400, 130) */}
+          <g transform="translate(400, 130)">
             <circle cx="0" cy="0" r="16" fill="white" />
             <image href="https://upload.wikimedia.org/wikipedia/commons/d/d5/Slack_icon_2019.svg" x="-8" y="-8" width="16" height="16" />
           </g>
-          {/* Google Sheets */}
-          <g transform="translate(480, 270)">
+          {/* Google Sheets on the line between 480,270 and 300,170 (Midpoint: 390, 220) */}
+          <g transform="translate(390, 220)">
             <circle cx="0" cy="0" r="16" fill="white" />
             <image href="https://cdn.simpleicons.org/googlesheets/34A853" x="-8" y="-8" width="16" height="16" />
           </g>
