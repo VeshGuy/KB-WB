@@ -20,33 +20,21 @@ export default function Hero() {
 
       <div className="max-w-[1100px] mx-auto px-6 animate-fade-up">
         
-        {/* Badge */}
-        <div className="inline-flex items-center px-4 py-1.5 rounded-full bg-surface border border-line-strong mb-8 text-sm font-semibold text-muted shadow-sm hover:shadow-md transition-shadow cursor-default">
-          <span className="text-accent-ink mr-2">Now in private beta</span>
-          <span className="text-faint mx-2">|</span>
-          <span>Built for ops-heavy teams</span>
-        </div>
-
         {/* Heading */}
-        <h1 className="text-6xl md:text-[5rem] max-w-[900px] mx-auto font-bold font-serif text-ink leading-[1.05] tracking-tight mb-8">
-          One trusted source of operations for your AI to <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent-ink to-teal-400">work from</span>.
+        <h1 className="text-6xl md:text-[5rem] max-w-[900px] mx-auto font-bold font-serif text-ink leading-[1.05] tracking-tight mb-8 mt-12">
+          The approved rulebook your AI <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent-ink to-teal-400">consults before it acts.</span>
         </h1>
 
         {/* Subtitle */}
-        <p className="text-xl md:text-2xl text-muted max-w-[650px] mx-auto mb-12 leading-relaxed">
-          Your AI follows your approved procedures step by step instead of improvising. And you can see exactly what it did.
+        <p className="text-xl md:text-2xl text-muted max-w-[700px] mx-auto mb-12 leading-relaxed">
+          Kaybi holds your company's approved operations in one place, so your AI works from your real procedures—not guesses—every time.
         </p>
 
         {/* CTAs */}
         <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
-          <a href="https://calendly.com/kaybi/teardown" className="inline-flex items-center justify-center px-7 py-3.5 rounded-xl text-base font-semibold bg-accent-ink text-white hover:bg-[#115e59] hover:-translate-y-0.5 hover:shadow-xl hover:shadow-accent-ink/20 transition-all duration-200">
-            Book a Demo <ArrowRight className="w-5 h-5 ml-2" />
+          <a href="https://calendly.com/kaybi/teardown" className="inline-flex items-center justify-center px-8 py-4 rounded-xl text-lg font-semibold bg-accent-ink text-white hover:bg-[#115e59] hover:-translate-y-0.5 hover:shadow-xl hover:shadow-accent-ink/20 transition-all duration-200 group">
+            Book a Demo <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
           </a>
-        </div>
-
-        {/* Not a chatbot beat */}
-        <div className="mt-8 text-sm text-muted font-medium bg-surface/50 border border-line-strong inline-block px-5 py-2.5 rounded-xl">
-          A chatbot answers questions when asked. Kaybi makes sure the work runs the right way, whether anyone asks or not.
         </div>
         
         {/* Hero Image Container */}
