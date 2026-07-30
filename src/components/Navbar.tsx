@@ -22,7 +22,7 @@ export default function Navbar() {
             Use Cases
           </a>
           <a href="https://calendly.com/kaybi/teardown" className="inline-flex items-center justify-center px-5 py-2.5 rounded-lg text-sm font-semibold bg-accent-ink text-white hover:bg-[#115e59] hover:-translate-y-[1px] hover:shadow-lg transition-all duration-200 shadow shadow-accent-ink/20">
-            Book a Teardown
+            Book a Demo
           </a>
         </div>
       </div>
