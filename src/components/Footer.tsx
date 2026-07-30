@@ -11,7 +11,7 @@ export default function Footer() {
           <span className="font-serif text-2xl font-semibold tracking-tight text-ink">kaybi</span>
         </div>
         <p className="text-muted text-base max-w-[320px] leading-relaxed mb-8">
-          The playbook your AI runs on. Approved procedures in, every action logged.
+          The Operations Context Layer for AI. Real procedures in, every action logged.
         </p>
         
         <div className="w-24 h-px bg-line mb-8"></div>
