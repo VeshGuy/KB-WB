@@ -1,22 +1,22 @@
-import { FileText, ClipboardList, ShieldAlert, RefreshCw } from 'lucide-react';
+import { Image as ImageIcon, ClipboardList, ShieldAlert, RefreshCw } from 'lucide-react';
 
 export default function MockDashboard({ activeStep }: { activeStep: number }) {
   return (
     <div className="w-full h-full min-h-[440px] rounded-xl border border-line bg-surface shadow-xl font-sans text-left overflow-hidden flex flex-col relative bg-[#faf9f7]">
       
-      {/* Step 0: Upload Docs */}
+      {/* Step 0: Upload Files */}
       <div className={`absolute inset-0 transition-opacity duration-700 flex flex-col ${activeStep === 0 ? 'opacity-100 z-10' : 'opacity-0 pointer-events-none z-0'}`}>
         <div className="bg-paper border-b border-line px-5 py-4 flex items-center justify-between">
           <div>
             <h3 className="font-bold text-ink">Knowledge Base</h3>
-            <p className="text-xs text-muted">Ingesting source documents</p>
+            <p className="text-xs text-muted">Ingesting source files</p>
           </div>
-          <span className="text-xs font-semibold bg-blue-100 text-blue-700 px-2 py-0.5 rounded animate-pulse">Uploading 3 items</span>
+          <span className="text-xs font-semibold bg-blue-100 text-blue-700 px-2 py-0.5 rounded animate-pulse">Uploading 4 items</span>
         </div>
         <div className="p-5 space-y-3">
            <div className="border border-line rounded-lg bg-white p-3 flex items-center gap-3">
-              <div className="bg-blue-50 p-2 rounded">
-                 <FileText className="w-5 h-5 text-blue-500" />
+              <div className="bg-red-50 p-2 rounded flex items-center justify-center">
+                 <img src="https://upload.wikimedia.org/wikipedia/commons/8/87/PDF_file_icon.svg" alt="PDF" className="w-5 h-5" />
               </div>
               <div className="flex-1">
                  <div className="text-sm font-medium text-ink">Returns_Policy_2026.pdf</div>
@@ -24,21 +24,33 @@ export default function MockDashboard({ activeStep }: { activeStep: number }) {
               </div>
               <RefreshCw className="w-4 h-4 text-blue-400 animate-spin shrink-0" />
            </div>
+           
            <div className="border border-line rounded-lg bg-white p-3 flex items-center gap-3 opacity-75">
-              <div className="bg-blue-50 p-2 rounded">
-                 <FileText className="w-5 h-5 text-blue-500" />
+              <div className="bg-blue-50 p-2 rounded flex items-center justify-center">
+                 <img src="https://cdn.simpleicons.org/confluence/0052CC" alt="Confluence" className="w-5 h-5" />
               </div>
               <div className="flex-1">
-                 <div className="text-sm font-medium text-ink">Carrier_SLA_Agreement.docx</div>
+                 <div className="text-sm font-medium text-ink">Returns Playbook (Confluence)</div>
                  <div className="text-xs text-muted">Queued</div>
               </div>
            </div>
+           
            <div className="border border-line rounded-lg bg-white p-3 flex items-center gap-3 opacity-50">
-              <div className="bg-blue-50 p-2 rounded">
-                 <FileText className="w-5 h-5 text-blue-500" />
+              <div className="bg-slate-50 p-2 rounded flex items-center justify-center">
+                 <img src="https://upload.wikimedia.org/wikipedia/commons/e/e9/Notion-logo.svg" alt="Notion" className="w-5 h-5" />
               </div>
               <div className="flex-1">
-                 <div className="text-sm font-medium text-ink">Employee_Handbook.md</div>
+                 <div className="text-sm font-medium text-ink">Team Handbook (Notion)</div>
+                 <div className="text-xs text-muted">Queued</div>
+              </div>
+           </div>
+           
+           <div className="border border-line rounded-lg bg-white p-3 flex items-center gap-3 opacity-40">
+              <div className="bg-emerald-50 p-2 rounded flex items-center justify-center">
+                 <ImageIcon className="w-5 h-5 text-emerald-500" />
+              </div>
+              <div className="flex-1">
+                 <div className="text-sm font-medium text-ink">Damage_Example_Photo.jpg</div>
                  <div className="text-xs text-muted">Queued</div>
               </div>
            </div>
