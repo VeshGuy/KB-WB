@@ -19,7 +19,7 @@ export default function MockDashboard({ activeStep }: { activeStep: number }) {
                  <img src="https://upload.wikimedia.org/wikipedia/commons/8/87/PDF_file_icon.svg" alt="PDF" className="w-5 h-5" />
               </div>
               <div className="flex-1">
-                 <div className="text-sm font-medium text-ink">Security_Policy_2026.pdf</div>
+                 <div className="text-sm font-medium text-ink">Alliance_Vendor_SLA.pdf</div>
                  <div className="text-xs text-muted">Extracting text & vectors...</div>
               </div>
               <RefreshCw className="w-4 h-4 text-blue-400 animate-spin shrink-0" />
@@ -30,7 +30,7 @@ export default function MockDashboard({ activeStep }: { activeStep: number }) {
                  <img src="https://cdn.simpleicons.org/confluence/0052CC" alt="Confluence" className="w-5 h-5" />
               </div>
               <div className="flex-1">
-                 <div className="text-sm font-medium text-ink">On-Call Playbook (Confluence)</div>
+                 <div className="text-sm font-medium text-ink">Routing_Guidelines (Confluence)</div>
                  <div className="text-xs text-muted">Queued</div>
               </div>
            </div>
@@ -40,7 +40,7 @@ export default function MockDashboard({ activeStep }: { activeStep: number }) {
                  <img src="https://upload.wikimedia.org/wikipedia/commons/e/e9/Notion-logo.svg" alt="Notion" className="w-5 h-5" />
               </div>
               <div className="flex-1">
-                 <div className="text-sm font-medium text-ink">Engineering Handbook (Notion)</div>
+                 <div className="text-sm font-medium text-ink">Dispatch_Playbook (Notion)</div>
                  <div className="text-xs text-muted">Queued</div>
               </div>
            </div>
@@ -50,7 +50,7 @@ export default function MockDashboard({ activeStep }: { activeStep: number }) {
                  <ImageIcon className="w-5 h-5 text-emerald-500" />
               </div>
               <div className="flex-1">
-                 <div className="text-sm font-medium text-ink">Error_Screenshot.jpg</div>
+                 <div className="text-sm font-medium text-ink">Gate_Check_Photo.jpg</div>
                  <div className="text-xs text-muted">Queued</div>
               </div>
            </div>
@@ -134,9 +134,9 @@ export default function MockDashboard({ activeStep }: { activeStep: number }) {
               <div className="p-4 border-b border-line bg-surface">
                  <div className="flex items-center gap-2 mb-1">
                    <ClipboardList className="w-4 h-4 text-purple-500 shrink-0" />
-                   <span className="text-sm font-bold text-ink">Procedure: Bug Escalation</span>
+                   <span className="text-sm font-bold text-ink">Procedure: Dispatch Routing Rule</span>
                  </div>
-                 <p className="text-xs text-muted">Source: Security_Policy_2026.pdf, Engineering Handbook (Notion)</p>
+                 <p className="text-xs text-muted">Source: Alliance_Vendor_SLA.pdf, Dispatch_Playbook (Notion)</p>
               </div>
               <div className="p-4 flex flex-col gap-3 flex-1 relative">
                  {/* Connecting line */}
@@ -146,19 +146,19 @@ export default function MockDashboard({ activeStep }: { activeStep: number }) {
                     <div className="flex items-start gap-3">
                        <div className="w-5 h-5 rounded-full bg-surface border border-line flex items-center justify-center text-[10px] font-bold text-muted shrink-0 mt-1">1</div>
                        <div className="bg-surface border border-line rounded p-2.5 text-xs flex-1 shadow-sm">
-                          <span className="font-medium text-ink">Trigger:</span> Ticket tagged with <span className="px-1.5 py-0.5 bg-gray-200 rounded text-ink">#urgent-bug</span>
+                          <span className="font-medium text-ink">Trigger:</span> Load assigned to <span className="px-1.5 py-0.5 bg-gray-200 rounded text-ink">Alliance</span>
                        </div>
                     </div>
                     <div className="flex items-start gap-3">
                        <div className="w-5 h-5 rounded-full bg-surface border border-line flex items-center justify-center text-[10px] font-bold text-muted shrink-0 mt-1">2</div>
                        <div className="bg-surface border border-line rounded p-2.5 text-xs flex-1 shadow-sm">
-                          <span className="font-medium text-ink">Condition:</span> If <span className="font-mono text-pink-600 bg-pink-50 px-1 rounded">time_unresolved &gt; 30_mins</span>
+                          <span className="font-medium text-ink">Condition:</span> If <span className="font-mono text-pink-600 bg-pink-50 px-1 rounded">equipment == 'reefer' AND time &lt; 09:00</span>
                        </div>
                     </div>
                     <div className="flex items-start gap-3 opacity-70 animate-pulse">
                        <div className="w-5 h-5 rounded-full bg-purple-100 border border-purple-200 flex items-center justify-center text-[10px] font-bold text-purple-700 shrink-0 mt-1">3</div>
                        <div className="bg-purple-50 border border-purple-100 rounded p-2.5 text-xs flex-1 text-purple-800 shadow-sm">
-                          <span className="font-medium">Action:</span> Paging on-call engineer...
+                          <span className="font-medium">Action:</span> Drafting dispatch block...
                        </div>
                     </div>
                  </div>
@@ -181,9 +181,9 @@ export default function MockDashboard({ activeStep }: { activeStep: number }) {
               <div className="p-3 border-b border-line bg-surface flex flex-col gap-1">
                  <div className="flex items-center gap-2">
                    <ShieldAlert className="w-4 h-4 text-amber-500 shrink-0" />
-                   <span className="text-sm font-bold text-ink">Procedure: Bug Escalation</span>
+                   <span className="text-sm font-bold text-ink">Procedure: Dispatch Routing Rule</span>
                  </div>
-                 <p className="text-xs text-muted ml-6">Source: Security_Policy_2026.pdf, Engineering Handbook (Notion)</p>
+                 <p className="text-xs text-muted ml-6">Source: Alliance_Vendor_SLA.pdf, Dispatch_Playbook (Notion)</p>
               </div>
               
               <div className="p-4 flex flex-col gap-2 flex-1 relative bg-white">
@@ -192,19 +192,19 @@ export default function MockDashboard({ activeStep }: { activeStep: number }) {
                     <div className="flex items-start gap-3">
                        <div className="w-5 h-5 rounded-full bg-surface border border-line flex items-center justify-center text-[10px] font-bold text-muted shrink-0 mt-0.5">1</div>
                        <div className="bg-surface border border-line rounded p-2 text-xs flex-1 shadow-sm">
-                          <span className="font-medium text-ink">Trigger:</span> Ticket tagged with <span className="px-1.5 py-0.5 bg-gray-200 rounded text-ink">#urgent-bug</span>
+                          <span className="font-medium text-ink">Trigger:</span> Load assigned to <span className="px-1.5 py-0.5 bg-gray-200 rounded text-ink">Alliance</span>
                        </div>
                     </div>
                     <div className="flex items-start gap-3">
                        <div className="w-5 h-5 rounded-full bg-surface border border-line flex items-center justify-center text-[10px] font-bold text-muted shrink-0 mt-0.5">2</div>
                        <div className="bg-surface border border-line rounded p-2 text-xs flex-1 shadow-sm">
-                          <span className="font-medium text-ink">Condition:</span> If <span className="font-mono text-pink-600 bg-pink-50 px-1 rounded">time_unresolved &gt; 30_mins</span>
+                          <span className="font-medium text-ink">Condition:</span> If <span className="font-mono text-pink-600 bg-pink-50 px-1 rounded">equipment == 'reefer' AND time &lt; 09:00</span>
                        </div>
                     </div>
                     <div className="flex items-start gap-3">
                        <div className="w-5 h-5 rounded-full bg-surface border border-line flex items-center justify-center text-[10px] font-bold text-muted shrink-0 mt-0.5">3</div>
                        <div className="bg-surface border border-line rounded p-2 text-xs flex-1 shadow-sm">
-                          <span className="font-medium text-ink">Action:</span> Page on-call engineer via PagerDuty
+                          <span className="font-medium text-ink">Action:</span> Block dispatch (Avoid $1,200 fine)
                        </div>
                     </div>
                  </div>
@@ -254,21 +254,21 @@ export default function MockDashboard({ activeStep }: { activeStep: number }) {
                <div className="px-3 py-2 flex items-center justify-between">
                  <div className="flex items-center gap-2">
                    <div className="w-1.5 h-1.5 rounded-full bg-emerald-500 shrink-0" />
-                   <span className="text-xs font-medium text-ink truncate">Bug Triage #8492</span>
+                   <span className="text-xs font-medium text-ink truncate">Dispatch Route #8492</span>
                  </div>
                  <span className="text-[10px] text-faint shrink-0">2m ago</span>
                </div>
                <div className="px-3 py-2 flex items-center justify-between">
                  <div className="flex items-center gap-2">
                    <div className="w-1.5 h-1.5 rounded-full bg-emerald-500 shrink-0" />
-                   <span className="text-xs font-medium text-ink truncate">DB Access Provisioning</span>
+                   <span className="text-xs font-medium text-ink truncate">Driver Onboarding</span>
                  </div>
                  <span className="text-[10px] text-faint shrink-0">15m ago</span>
                </div>
                <div className="px-3 py-2 flex items-center justify-between">
                  <div className="flex items-center gap-2">
                    <div className="w-1.5 h-1.5 rounded-full bg-amber-500 shrink-0" />
-                   <span className="text-xs font-medium text-ink truncate">Alert Remediation #AL-9912</span>
+                   <span className="text-xs font-medium text-ink truncate">Shortage Claim #CLM-9912</span>
                  </div>
                  <span className="text-[10px] text-faint shrink-0">1h ago</span>
                </div>
