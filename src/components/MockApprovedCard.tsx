@@ -29,17 +29,17 @@ export default function MockApprovedCard() {
         }
         
         .animate-mouse-approve {
-          animation: mouseMoveApprove 6s ease-in-out infinite;
+          animation: mouseMoveApprove 4s ease-in-out infinite;
           z-index: 50;
         }
         .animate-btn-approve {
-          animation: buttonPressApprove 6s ease-in-out infinite;
+          animation: buttonPressApprove 4s ease-in-out infinite;
         }
         .animate-action-row {
-          animation: actionRowFade 6s ease-in-out infinite;
+          animation: actionRowFade 4s ease-in-out infinite;
         }
         .animate-success-row {
-          animation: successRowFade 6s ease-in-out infinite;
+          animation: successRowFade 4s ease-in-out infinite;
         }
       `}</style>
 
