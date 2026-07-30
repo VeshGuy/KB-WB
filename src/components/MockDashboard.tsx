@@ -172,34 +172,52 @@ export default function MockDashboard({ activeStep }: { activeStep: number }) {
         <div className="bg-paper border-b border-line px-5 py-4 flex items-center justify-between">
           <div>
             <h3 className="font-bold text-ink">Approvals</h3>
-            <p className="text-xs text-muted">Awaiting steward review</p>
+            <p className="text-xs text-muted">Awaiting review</p>
           </div>
           <span className="flex h-5 w-5 items-center justify-center rounded-full bg-amber-100 text-[11px] font-bold text-amber-700">1</span>
         </div>
-        <div className="p-5">
-          <div className="bg-white rounded-lg border border-line shadow-sm overflow-hidden">
-            <div className="p-4 border-b border-line">
-              <div className="flex items-center gap-2 mb-1">
-                <ShieldAlert className="w-4 h-4 text-amber-500 shrink-0" />
-                <span className="text-sm font-bold text-ink">New Procedure: Process Return</span>
+        <div className="p-5 flex-1 flex flex-col">
+           <div className="bg-white rounded-lg border border-line shadow-sm overflow-hidden flex-1 flex flex-col">
+              <div className="p-3 border-b border-line bg-surface flex justify-between items-center">
+                 <div className="flex items-center gap-2">
+                   <ShieldAlert className="w-4 h-4 text-amber-500 shrink-0" />
+                   <span className="text-sm font-bold text-ink">Procedure: Process Return</span>
+                 </div>
               </div>
-              <p className="text-xs text-muted">Kaybi drafted a new procedure based on your latest policy uploads. It requires your approval to go live.</p>
-            </div>
-            
-            <div className="bg-surface px-4 py-3 flex flex-wrap gap-4 text-xs border-b border-line">
-               <div><span className="text-faint">Trigger:</span> <span className="font-medium text-ink">Tag: #returns</span></div>
-               <div><span className="text-faint">Actions:</span> <span className="font-medium text-ink">3 steps</span></div>
-            </div>
-            
-            <div className="p-4 flex gap-3">
-               <button className="flex-1 bg-ink text-white font-semibold text-sm py-2 rounded-lg hover:bg-black transition-colors">
-                 Approve & Deploy
-               </button>
-               <button className="flex-1 bg-surface border border-line text-ink font-semibold text-sm py-2 rounded-lg hover:bg-paper transition-colors">
-                 Reject
-               </button>
-            </div>
-          </div>
+              
+              <div className="p-4 flex flex-col gap-2 flex-1 relative bg-white">
+                 <div className="absolute left-[25px] top-4 bottom-4 w-px bg-line z-0" />
+                 <div className="flex flex-col gap-2 relative z-10">
+                    <div className="flex items-start gap-3">
+                       <div className="w-5 h-5 rounded-full bg-surface border border-line flex items-center justify-center text-[10px] font-bold text-muted shrink-0 mt-0.5">1</div>
+                       <div className="bg-surface border border-line rounded p-2 text-xs flex-1 shadow-sm">
+                          <span className="font-medium text-ink">Trigger:</span> Ticket tagged with <span className="px-1.5 py-0.5 bg-gray-200 rounded text-ink">#returns</span>
+                       </div>
+                    </div>
+                    <div className="flex items-start gap-3">
+                       <div className="w-5 h-5 rounded-full bg-surface border border-line flex items-center justify-center text-[10px] font-bold text-muted shrink-0 mt-0.5">2</div>
+                       <div className="bg-surface border border-line rounded p-2 text-xs flex-1 shadow-sm">
+                          <span className="font-medium text-ink">Condition:</span> If <span className="font-mono text-pink-600 bg-pink-50 px-1 rounded">days_since_purchase &gt; 30</span>
+                       </div>
+                    </div>
+                    <div className="flex items-start gap-3">
+                       <div className="w-5 h-5 rounded-full bg-surface border border-line flex items-center justify-center text-[10px] font-bold text-muted shrink-0 mt-0.5">3</div>
+                       <div className="bg-surface border border-line rounded p-2 text-xs flex-1 shadow-sm">
+                          <span className="font-medium text-ink">Action:</span> Escalate to Human (Policy Exceeded)
+                       </div>
+                    </div>
+                 </div>
+              </div>
+              
+              <div className="p-3 border-t border-line bg-surface flex gap-3">
+                 <button className="flex-1 bg-ink text-white font-semibold text-xs py-2 rounded-lg hover:bg-black transition-colors">
+                   Approve & Deploy
+                 </button>
+                 <button className="flex-1 bg-white border border-line text-ink font-semibold text-xs py-2 rounded-lg hover:bg-paper transition-colors">
+                   Reject
+                 </button>
+              </div>
+           </div>
         </div>
       </div>
 
