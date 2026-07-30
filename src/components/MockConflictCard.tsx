@@ -51,21 +51,23 @@ export default function MockConflictCard() {
         </div>
         
         <p className="text-sm font-bold text-ink leading-snug pr-4">
-          "Overnight & expedited shipping suspended — carrier outage" would stop "Overnight Shipping Order Handling" from running.
+          New fact "Carrier outage" contradicts the procedure "Overnight Shipping"
         </p>
         
         <p className="text-xs text-muted leading-relaxed">
-          Overnight and expedited shipping are currently suspended due to a carrier outage, so the overnight shipping order handling skill cannot promise same-day, next-day, or overnight delivery.
+          If you do not block this procedure the AI will keep promising next day delivery to customers. This will result in massive refund costs and complaints due to the current carrier outage.
         </p>
         
         <div className="bg-[#faf9f7] rounded-md p-3 mt-1 border border-line text-[11px] text-ink leading-relaxed">
-          <span className="font-bold">Recommended:</span> Do not use the overnight shipping handling logic for customer commitments; route orders using standard ground shipping rules...
+          <span className="font-bold">Recommendation to avoid refunds</span>
+          <br />
+          Block the overnight shipping procedure and force the AI to only offer standard ground shipping until the carrier is back online.
         </div>
         
         <div className="flex gap-3 mt-2">
           <div className="relative">
             <button className="bg-teal-600 text-white px-4 py-2 rounded-lg text-xs font-semibold shadow-sm animate-btn-conflict transition-colors">
-              Approve — activate the block
+              Approve block
             </button>
             <div className="absolute top-1/2 left-1/2 pointer-events-none animate-mouse-conflict origin-top-left">
               <MousePointer2 className="w-5 h-5 fill-black text-white drop-shadow-md" />
@@ -83,7 +85,7 @@ export default function MockConflictCard() {
           <CheckCircle2 className="w-6 h-6 text-teal-600" />
         </div>
         <p className="text-sm font-bold text-ink text-center">Conflict Resolved</p>
-        <p className="text-xs text-muted text-center mt-1">Overnight Shipping handling automatically blocked until the carrier outage is cleared.</p>
+        <p className="text-xs text-muted text-center mt-1">Overnight shipping is now blocked. The AI will safely route all orders to ground shipping.</p>
       </div>
     </div>
   );
