@@ -26,7 +26,7 @@ const features = [
 
 export default function Features() {
   return (
-    <section className="py-32 px-6 bg-white relative">
+    <section id="features" className="py-32 px-6 bg-white relative">
       <div className="max-w-[1200px] mx-auto">
         <h2 className="text-4xl md:text-5xl font-black text-[#1c1a17] mb-24 text-center">
           How Kaybi keeps your operations on track
