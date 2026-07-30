@@ -11,10 +11,20 @@ export default function NetworkBackground() {
           <filter id="nodeShadow" x="-20%" y="-20%" width="140%" height="140%">
             <feDropShadow dx="0" dy="4" stdDeviation="6" floodColor="#1e293b" floodOpacity="0.08" />
           </filter>
+          <radialGradient id="centerMaskGlow" cx="50%" cy="40%" r="50%">
+            <stop offset="0%" stopColor="black" stopOpacity="0" />
+            <stop offset="25%" stopColor="black" stopOpacity="0" />
+            <stop offset="70%" stopColor="black" stopOpacity="1" />
+            <stop offset="100%" stopColor="black" stopOpacity="1" />
+          </radialGradient>
+          <mask id="centerMask">
+            <rect width="100%" height="100%" fill="url(#centerMaskGlow)" />
+          </mask>
         </defs>
 
-        {/* Dotted Grid Background */}
-        <rect width="100%" height="100%" fill="url(#dotGrid)" />
+        <g mask="url(#centerMask)">
+          {/* Dotted Grid Background */}
+          <rect width="100%" height="100%" fill="url(#dotGrid)" />
 
         <g stroke="#a5b4fc" strokeWidth="1.5" fill="none">
           {/* Main web connecting joints */}
@@ -104,6 +114,7 @@ export default function NetworkBackground() {
             <circle cx="0" cy="0" r="28" fill="white" />
             <image href="https://cdn.simpleicons.org/asana/F06A6A" x="-14" y="-14" width="28" height="28" />
           </g>
+        </g>
         </g>
       </svg>
     </div>

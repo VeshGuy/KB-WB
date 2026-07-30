@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { BookOpen } from 'lucide-react';
 
 export default function NetworkUpdateAnimation() {
   const [key, setKey] = useState(0);
@@ -12,7 +13,7 @@ export default function NetworkUpdateAnimation() {
   }, []);
 
   return (
-    <div key={key} className="w-full aspect-video rounded-2xl border-2 border-line-strong bg-paper relative overflow-hidden flex items-center justify-center">
+    <div key={key} className="w-full aspect-video rounded-2xl bg-white relative overflow-hidden flex items-center justify-center border border-line">
       <style>{`
         @keyframes popIn {
           0% { transform: scale(0); opacity: 0; }
@@ -39,70 +40,99 @@ export default function NetworkUpdateAnimation() {
       
       <svg className="absolute inset-0 w-full h-full" viewBox="0 0 600 340">
         <defs>
-          <radialGradient id="nodeGlow" cx="50%" cy="50%" r="50%">
-            <stop offset="0%" stopColor="#10b981" stopOpacity="0.4" />
-            <stop offset="100%" stopColor="#10b981" stopOpacity="0" />
-          </radialGradient>
+          <pattern id="dotGridSmall" width="20" height="20" patternUnits="userSpaceOnUse">
+            <circle cx="1" cy="1" r="1" fill="#e2e8f0" />
+          </pattern>
+          <filter id="nodeShadowSmall" x="-20%" y="-20%" width="140%" height="140%">
+            <feDropShadow dx="0" dy="2" stdDeviation="4" floodColor="#1e293b" floodOpacity="0.08" />
+          </filter>
         </defs>
 
+        {/* Dotted Grid */}
+        <rect width="100%" height="100%" fill="url(#dotGridSmall)" />
+
         {/* Existing Edges */}
-        <line x1="100" y1="80" x2="220" y2="160" stroke="#ddd6c9" strokeWidth="2" />
-        <line x1="120" y1="260" x2="220" y2="160" stroke="#ddd6c9" strokeWidth="2" />
-        <line x1="500" y1="90" x2="400" y2="200" stroke="#ddd6c9" strokeWidth="2" />
-        <line x1="480" y1="270" x2="400" y2="200" stroke="#ddd6c9" strokeWidth="2" />
+        <g stroke="#a5b4fc" strokeWidth="1.5">
+          <line x1="100" y1="80" x2="220" y2="160" />
+          <line x1="120" y1="260" x2="220" y2="160" />
+          <line x1="500" y1="90" x2="400" y2="200" />
+          <line x1="480" y1="270" x2="400" y2="200" />
+        </g>
 
         {/* Animated Edges (shooting FROM 300, 170 to existing nodes) */}
-        {/* To 220,160 */}
         <line x1="300" y1="170" x2="220" y2="160" 
-          stroke="#10b981" strokeWidth="3" 
+          stroke="#10b981" strokeWidth="2" 
           strokeDasharray="100" strokeDashoffset="100"
           className="animate-draw-line animate-glow"
           style={{ animationDelay: '0.6s' }}
         />
-        {/* To 400,200 */}
         <line x1="300" y1="170" x2="400" y2="200" 
-          stroke="#10b981" strokeWidth="3" 
+          stroke="#10b981" strokeWidth="2" 
           strokeDasharray="120" strokeDashoffset="120"
           className="animate-draw-line animate-glow"
           style={{ animationDelay: '0.8s' }}
         />
-        {/* To 120,260 */}
         <line x1="300" y1="170" x2="120" y2="260" 
-          stroke="#10b981" strokeWidth="3" 
+          stroke="#10b981" strokeWidth="2" 
           strokeDasharray="250" strokeDashoffset="250"
           className="animate-draw-line animate-glow"
           style={{ animationDelay: '1.0s' }}
         />
-        {/* To 500,90 */}
         <line x1="300" y1="170" x2="500" y2="90" 
-          stroke="#10b981" strokeWidth="3" 
+          stroke="#10b981" strokeWidth="2" 
           strokeDasharray="250" strokeDashoffset="250"
           className="animate-draw-line animate-glow"
           style={{ animationDelay: '1.2s' }}
         />
-        
-        {/* To 100,80 */}
         <line x1="300" y1="170" x2="100" y2="80" 
-          stroke="#10b981" strokeWidth="3" 
+          stroke="#10b981" strokeWidth="2" 
           strokeDasharray="250" strokeDashoffset="250"
           className="animate-draw-line animate-glow"
           style={{ animationDelay: '1.4s' }}
         />
 
-        {/* Existing Nodes */}
-        <circle cx="100" cy="80" r="20" fill="#faf9f7" stroke="#1c1a17" strokeWidth="3" />
-        <circle cx="120" cy="260" r="20" fill="#faf9f7" stroke="#1c1a17" strokeWidth="3" />
-        <circle cx="220" cy="160" r="26" fill="#faf9f7" stroke="#1c1a17" strokeWidth="3" />
-        <circle cx="500" cy="90" r="20" fill="#faf9f7" stroke="#1c1a17" strokeWidth="3" />
-        <circle cx="480" cy="270" r="24" fill="#faf9f7" stroke="#1c1a17" strokeWidth="3" />
-        <circle cx="400" cy="200" r="26" fill="#faf9f7" stroke="#1c1a17" strokeWidth="3" />
+        {/* Structural Joints */}
+        <g stroke="#a5b4fc" strokeWidth="1.5" fill="white">
+          <circle cx="220" cy="160" r="3" />
+          <circle cx="400" cy="200" r="3" />
+        </g>
+
+        {/* Existing Logo Nodes */}
+        <g filter="url(#nodeShadowSmall)">
+          {/* Salesforce */}
+          <g transform="translate(100, 80)">
+            <circle cx="0" cy="0" r="16" fill="white" />
+            <image href="https://upload.wikimedia.org/wikipedia/commons/f/f9/Salesforce.com_logo.svg" x="-8" y="-8" width="16" height="16" />
+          </g>
+          {/* Notion */}
+          <g transform="translate(120, 260)">
+            <circle cx="0" cy="0" r="16" fill="white" />
+            <image href="https://upload.wikimedia.org/wikipedia/commons/e/e9/Notion-logo.svg" x="-8" y="-8" width="16" height="16" />
+          </g>
+          {/* Slack */}
+          <g transform="translate(500, 90)">
+            <circle cx="0" cy="0" r="16" fill="white" />
+            <image href="https://upload.wikimedia.org/wikipedia/commons/d/d5/Slack_icon_2019.svg" x="-8" y="-8" width="16" height="16" />
+          </g>
+          {/* Google Sheets */}
+          <g transform="translate(480, 270)">
+            <circle cx="0" cy="0" r="16" fill="white" />
+            <image href="https://cdn.simpleicons.org/googlesheets/34A853" x="-8" y="-8" width="16" height="16" />
+          </g>
+        </g>
 
         {/* Central Animated Node */}
         <g className="animate-node-pop" style={{ transformOrigin: '300px 170px', opacity: 0 }}>
-          <circle cx="300" cy="170" r="50" fill="url(#nodeGlow)" />
-          <circle cx="300" cy="170" r="32" fill="#10b981" stroke="#1c1a17" strokeWidth="3" />
+          <circle cx="300" cy="170" r="28" fill="white" filter="url(#nodeShadowSmall)" />
+          <circle cx="300" cy="170" r="28" fill="none" stroke="#10b981" strokeWidth="2" className="animate-glow" />
         </g>
       </svg>
+      {/* Kaybi Logo overlay for the central node */}
+      <div className="absolute" style={{ left: '50%', top: '50%', transform: 'translate(-50%, -50%)' }}>
+        <div className="animate-node-pop flex items-center justify-center text-[#10b981]" style={{ opacity: 0 }}>
+          <BookOpen className="w-6 h-6" />
+        </div>
+      </div>
     </div>
   );
 }

@@ -11,7 +11,7 @@ export default function Navbar() {
         </div>
 
         {/* Navigation */}
-        <div className="flex items-center gap-8">
+        <div className="flex items-center gap-12">
           <a href="#features" className="text-sm font-semibold text-muted hover:text-ink transition-colors duration-200">
             Features
           </a>
