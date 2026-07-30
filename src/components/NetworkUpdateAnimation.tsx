@@ -30,11 +30,17 @@ export default function NetworkUpdateAnimation() {
         .animate-node-pop {
           animation: popIn 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
         }
-        .animate-draw-line {
-          animation: drawLine 0.8s ease-out forwards;
+        .animate-edge-1 {
+          animation: drawLine 0.8s ease-out 0.8s forwards, pulseGlow 2s ease-in-out 0.8s infinite alternate;
         }
-        .animate-glow {
-          animation: pulseGlow 2s ease-in-out infinite alternate;
+        .animate-edge-2 {
+          animation: drawLine 0.8s ease-out 1.0s forwards, pulseGlow 2s ease-in-out 1.0s infinite alternate;
+        }
+        .animate-edge-3 {
+          animation: drawLine 0.8s ease-out 1.2s forwards, pulseGlow 2s ease-in-out 1.2s infinite alternate;
+        }
+        .animate-edge-4 {
+          animation: drawLine 0.8s ease-out 1.4s forwards, pulseGlow 2s ease-in-out 1.4s infinite alternate;
         }
       `}</style>
       
@@ -67,26 +73,22 @@ export default function NetworkUpdateAnimation() {
         <line x1="200" y1="125" x2="300" y2="170" 
           stroke="#10b981" strokeWidth="2" 
           strokeDasharray="150" strokeDashoffset="150"
-          className="animate-draw-line animate-glow"
-          style={{ animationDelay: '0.8s' }}
+          className="animate-edge-1"
         />
         <line x1="210" y1="215" x2="300" y2="170" 
           stroke="#10b981" strokeWidth="2" 
           strokeDasharray="150" strokeDashoffset="150"
-          className="animate-draw-line animate-glow"
-          style={{ animationDelay: '1.0s' }}
+          className="animate-edge-2"
         />
         <line x1="400" y1="130" x2="300" y2="170" 
           stroke="#10b981" strokeWidth="2" 
           strokeDasharray="150" strokeDashoffset="150"
-          className="animate-draw-line animate-glow"
-          style={{ animationDelay: '1.2s' }}
+          className="animate-edge-3"
         />
         <line x1="390" y1="220" x2="300" y2="170" 
           stroke="#10b981" strokeWidth="2" 
           strokeDasharray="150" strokeDashoffset="150"
-          className="animate-draw-line animate-glow"
-          style={{ animationDelay: '1.4s' }}
+          className="animate-edge-4"
         />
 
         {/* Structural Blank Nodes (End points) */}
