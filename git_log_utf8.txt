@@ -1,0 +1,462 @@
+﻿commit ecc7e95d420a81fc26e12dcafd65d5ca055f20e1
+Author: VeshGuy <sarveshaiproj@gmail.com>
+Date:   Fri Jul 31 02:14:10 2026 +0530
+
+    Update hero subtitle
+
+diff --git a/src/components/Hero.tsx b/src/components/Hero.tsx
+index 606e022..547ec14 100644
+--- a/src/components/Hero.tsx
++++ b/src/components/Hero.tsx
+@@ -35,7 +35,7 @@ export default function Hero() {
+ 
+         {/* Subtitle */}
+         <p className="text-xl md:text-2xl text-muted max-w-[700px] mx-auto mb-12 leading-relaxed">
+-          Kaybi holds your company's operations in one place, so your AI works from your real procedures & does not guess.
++          Kaybi gives your AI a single source of truth for your operations, ensuring it follows exact procedures instead of making costly guesses.
+         </p>
+ 
+         {/* CTAs */}
+
+commit 2b709dc536c77fd899528da3b80d1361921d0c55
+Author: VeshGuy <sarveshaiproj@gmail.com>
+Date:   Fri Jul 31 00:42:55 2026 +0530
+
+    Update Hero copy, add aesthetic underline, and build animated NetworkBackground
+
+diff --git a/src/components/Hero.tsx b/src/components/Hero.tsx
+index 8fa1ca9..606e022 100644
+--- a/src/components/Hero.tsx
++++ b/src/components/Hero.tsx
+@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
+ import { ArrowRight } from 'lucide-react';
+ import WorkflowAnimation from './WorkflowAnimation';
+ import MockDashboard from './MockDashboard';
++import NetworkBackground from './NetworkBackground';
+ 
+ export default function Hero() {
+   const [activeStep, setActiveStep] = useState(0);
+@@ -15,19 +16,26 @@ export default function Hero() {
+ 
+   return (
+     <section className="relative pt-28 pb-32 text-center overflow-hidden">
++      <NetworkBackground />
+       {/* Subtle Background Glow */}
+       <div className="absolute top-[-20%] left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-accent-weak/50 rounded-full blur-[100px] pointer-events-none -z-10" />
+ 
+       <div className="max-w-[1100px] mx-auto px-6 animate-fade-up">
+         
+         {/* Heading */}
+-        <h1 className="text-6xl md:text-[5rem] max-w-[900px] mx-auto font-bold font-serif text-ink leading-[1.05] tracking-tight mb-8 mt-12">
+-          The Operations Context Layer your AI <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent-ink to-teal-400">needs before it acts.</span>
++        <h1 className="text-6xl md:text-[5rem] max-w-[1000px] mx-auto font-bold font-serif text-ink leading-[1.05] tracking-tight mb-8 mt-12">
++          The <span className="relative inline-block whitespace-nowrap">
++            <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent-ink to-teal-400">Operations Context Layer</span>
++            <svg className="absolute -bottom-1 left-0 w-full h-4 text-teal-400/80" viewBox="0 0 200 15" fill="none" preserveAspectRatio="none">
++              <path d="M 2 12 Q 50 2 100 8 T 198 12" stroke="currentColor" strokeWidth="3" strokeLinecap="round"/>
++            </svg>
++          </span>
++          <br className="hidden md:block" /> your AI needs before it acts.
+         </h1>
+ 
+         {/* Subtitle */}
+         <p className="text-xl md:text-2xl text-muted max-w-[700px] mx-auto mb-12 leading-relaxed">
+-          Kaybi holds your company's approved operations in one place, so your AI works from your real proceduresΓÇönot guessesΓÇöevery time.
++          Kaybi holds your company's operations in one place, so your AI works from your real procedures & does not guess.
+         </p>
+ 
+         {/* CTAs */}
+
+commit 5c5a485348d70f095212e068dfc66efce41aeea4
+Author: VeshGuy <sarveshaiproj@gmail.com>
+Date:   Fri Jul 31 00:27:57 2026 +0530
+
+    Update Hero headline copy to Operations Context Layer
+
+diff --git a/src/components/Hero.tsx b/src/components/Hero.tsx
+index 32b5f48..8fa1ca9 100644
+--- a/src/components/Hero.tsx
++++ b/src/components/Hero.tsx
+@@ -22,7 +22,7 @@ export default function Hero() {
+         
+         {/* Heading */}
+         <h1 className="text-6xl md:text-[5rem] max-w-[900px] mx-auto font-bold font-serif text-ink leading-[1.05] tracking-tight mb-8 mt-12">
+-          The approved rulebook your AI <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent-ink to-teal-400">consults before it acts.</span>
++          The Operations Context Layer your AI <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent-ink to-teal-400">needs before it acts.</span>
+         </h1>
+ 
+         {/* Subtitle */}
+
+commit 48c940f562a3d4762f8bed82bad143fbc634342b
+Author: VeshGuy <sarveshaiproj@gmail.com>
+Date:   Thu Jul 30 23:26:21 2026 +0530
+
+    Apply updated Hero copy
+
+diff --git a/src/components/Hero.tsx b/src/components/Hero.tsx
+index 52b1633..32b5f48 100644
+--- a/src/components/Hero.tsx
++++ b/src/components/Hero.tsx
+@@ -20,34 +20,22 @@ export default function Hero() {
+ 
+       <div className="max-w-[1100px] mx-auto px-6 animate-fade-up">
+         
+-        {/* Badge */}
+-        <div className="inline-flex items-center px-4 py-1.5 rounded-full bg-surface border border-line-strong mb-8 text-sm font-semibold text-muted shadow-sm hover:shadow-md transition-shadow cursor-default">
+-          <span className="text-accent-ink mr-2">Now in private beta</span>
+-          <span className="text-faint mx-2">|</span>
+-          <span>Built for ops-heavy teams</span>
+-        </div>
+-
+         {/* Heading */}
+-        <h1 className="text-6xl md:text-[5rem] max-w-[900px] mx-auto font-bold font-serif text-ink leading-[1.05] tracking-tight mb-8">
+-          One trusted source of operations for your AI to <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent-ink to-teal-400">work from</span>.
++        <h1 className="text-6xl md:text-[5rem] max-w-[900px] mx-auto font-bold font-serif text-ink leading-[1.05] tracking-tight mb-8 mt-12">
++          The approved rulebook your AI <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent-ink to-teal-400">consults before it acts.</span>
+         </h1>
+ 
+         {/* Subtitle */}
+-        <p className="text-xl md:text-2xl text-muted max-w-[650px] mx-auto mb-12 leading-relaxed">
+-          Your AI follows your approved procedures step by step instead of improvising. And you can see exactly what it did.
++        <p className="text-xl md:text-2xl text-muted max-w-[700px] mx-auto mb-12 leading-relaxed">
++          Kaybi holds your company's approved operations in one place, so your AI works from your real proceduresΓÇönot guessesΓÇöevery time.
+         </p>
+ 
+         {/* CTAs */}
+         <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
+-          <a href="https://calendly.com/kaybi/teardown" className="inline-flex items-center justify-center px-7 py-3.5 rounded-xl text-base font-semibold bg-accent-ink text-white hover:bg-[#115e59] hover:-translate-y-0.5 hover:shadow-xl hover:shadow-accent-ink/20 transition-all duration-200">
+-            Book a Demo <ArrowRight className="w-5 h-5 ml-2" />
++          <a href="https://calendly.com/kaybi/teardown" className="inline-flex items-center justify-center px-8 py-4 rounded-xl text-lg font-semibold bg-accent-ink text-white hover:bg-[#115e59] hover:-translate-y-0.5 hover:shadow-xl hover:shadow-accent-ink/20 transition-all duration-200 group">
++            Book a Demo <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+           </a>
+         </div>
+-
+-        {/* Not a chatbot beat */}
+-        <div className="mt-8 text-sm text-muted font-medium bg-surface/50 border border-line-strong inline-block px-5 py-2.5 rounded-xl">
+-          A chatbot answers questions when asked. Kaybi makes sure the work runs the right way, whether anyone asks or not.
+-        </div>
+         
+         {/* Hero Image Container */}
+         <div className="mt-24 px-4 sm:px-0">
+
+commit 1040b50ab0cbdb1a4f219e0ab509506cea030f5e
+Author: VeshGuy <sarveshaiproj@gmail.com>
+Date:   Thu Jul 30 22:46:27 2026 +0530
+
+    Remove Watch Demo CTA
+
+diff --git a/src/components/Hero.tsx b/src/components/Hero.tsx
+index 38e3c4e..52b1633 100644
+--- a/src/components/Hero.tsx
++++ b/src/components/Hero.tsx
+@@ -1,5 +1,5 @@
+ import { useEffect, useState } from 'react';
+-import { ArrowRight, PlayCircle } from 'lucide-react';
++import { ArrowRight } from 'lucide-react';
+ import WorkflowAnimation from './WorkflowAnimation';
+ import MockDashboard from './MockDashboard';
+ 
+@@ -42,9 +42,6 @@ export default function Hero() {
+           <a href="https://calendly.com/kaybi/teardown" className="inline-flex items-center justify-center px-7 py-3.5 rounded-xl text-base font-semibold bg-accent-ink text-white hover:bg-[#115e59] hover:-translate-y-0.5 hover:shadow-xl hover:shadow-accent-ink/20 transition-all duration-200">
+             Book a Demo <ArrowRight className="w-5 h-5 ml-2" />
+           </a>
+-          <a href="mailto:hello@kaybi.com" className="inline-flex items-center justify-center px-7 py-3.5 rounded-xl text-base font-semibold bg-surface text-ink border border-line-strong hover:bg-paper hover:border-muted shadow-sm hover:shadow-md transition-all duration-200">
+-            <PlayCircle className="w-5 h-5 mr-2 text-muted" /> Watch Demo
+-          </a>
+         </div>
+ 
+         {/* Not a chatbot beat */}
+
+commit 309751c4c24d7fe4f546200c889daf71ea2ac04f
+Author: VeshGuy <sarveshaiproj@gmail.com>
+Date:   Thu Jul 30 22:43:30 2026 +0530
+
+    Change Book a Teardown CTA to Book a Demo
+
+diff --git a/src/components/Hero.tsx b/src/components/Hero.tsx
+index 9187c0c..38e3c4e 100644
+--- a/src/components/Hero.tsx
++++ b/src/components/Hero.tsx
+@@ -40,7 +40,7 @@ export default function Hero() {
+         {/* CTAs */}
+         <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
+           <a href="https://calendly.com/kaybi/teardown" className="inline-flex items-center justify-center px-7 py-3.5 rounded-xl text-base font-semibold bg-accent-ink text-white hover:bg-[#115e59] hover:-translate-y-0.5 hover:shadow-xl hover:shadow-accent-ink/20 transition-all duration-200">
+-            Book a Teardown <ArrowRight className="w-5 h-5 ml-2" />
++            Book a Demo <ArrowRight className="w-5 h-5 ml-2" />
+           </a>
+           <a href="mailto:hello@kaybi.com" className="inline-flex items-center justify-center px-7 py-3.5 rounded-xl text-base font-semibold bg-surface text-ink border border-line-strong hover:bg-paper hover:border-muted shadow-sm hover:shadow-md transition-all duration-200">
+             <PlayCircle className="w-5 h-5 mr-2 text-muted" /> Watch Demo
+
+commit efecce78f949202fbb0767265006292ed2e1f30e
+Author: VeshGuy <sarveshaiproj@gmail.com>
+Date:   Thu Jul 30 20:42:25 2026 +0530
+
+    Update headline, simplify UseCases to one line, wire Navbar CTA
+
+diff --git a/src/components/Hero.tsx b/src/components/Hero.tsx
+index 0362e56..9187c0c 100644
+--- a/src/components/Hero.tsx
++++ b/src/components/Hero.tsx
+@@ -29,7 +29,7 @@ export default function Hero() {
+ 
+         {/* Heading */}
+         <h1 className="text-6xl md:text-[5rem] max-w-[900px] mx-auto font-bold font-serif text-ink leading-[1.05] tracking-tight mb-8">
+-          AI that runs your operations <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent-ink to-teal-400">the right way</span>, every time.
++          One trusted source of operations for your AI to <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent-ink to-teal-400">work from</span>.
+         </h1>
+ 
+         {/* Subtitle */}
+
+commit 58a7267ab2dd1fff350acf06876f49a6fa697415
+Author: VeshGuy <sarveshaiproj@gmail.com>
+Date:   Thu Jul 30 00:15:51 2026 +0530
+
+    Fix flex height collapse bug causing MockDashboard to be invisible
+
+diff --git a/src/components/Hero.tsx b/src/components/Hero.tsx
+index e3aca55..0362e56 100644
+--- a/src/components/Hero.tsx
++++ b/src/components/Hero.tsx
+@@ -60,7 +60,7 @@ export default function Hero() {
+               <div className="flex-1 w-full relative z-10">
+                 <WorkflowAnimation activeStep={activeStep} />
+               </div>
+-              <div className="flex-[1.2] w-full h-full relative z-10">
++              <div className="flex-[1.2] w-full h-[440px] relative z-10">
+                 <MockDashboard activeStep={activeStep} />
+               </div>
+             </div>
+
+commit a037f51ab50d5da1fe4faf2920df514c5ed58e74
+Author: VeshGuy <sarveshaiproj@gmail.com>
+Date:   Thu Jul 30 00:02:30 2026 +0530
+
+    Add MockDashboard dynamically synced to WorkflowAnimation pipeline state
+
+diff --git a/src/components/Hero.tsx b/src/components/Hero.tsx
+index 137641a..e3aca55 100644
+--- a/src/components/Hero.tsx
++++ b/src/components/Hero.tsx
+@@ -1,7 +1,18 @@
++import { useEffect, useState } from 'react';
+ import { ArrowRight, PlayCircle } from 'lucide-react';
+ import WorkflowAnimation from './WorkflowAnimation';
++import MockDashboard from './MockDashboard';
+ 
+ export default function Hero() {
++  const [activeStep, setActiveStep] = useState(0);
++
++  useEffect(() => {
++    const interval = setInterval(() => {
++      setActiveStep((prev) => (prev + 1) % 5);
++    }, 2500); // Increased to 2.5s so we can read the dashboard mockups
++    return () => clearInterval(interval);
++  }, []);
++
+   return (
+     <section className="relative pt-28 pb-32 text-center overflow-hidden">
+       {/* Subtle Background Glow */}
+@@ -46,13 +57,11 @@ export default function Hero() {
+           <div className="relative rounded-2xl border border-line-strong bg-surface p-2 shadow-2xl shadow-ink/5 mx-auto max-w-[1040px]">
+             <div className="absolute inset-0 bg-gradient-to-t from-paper/40 to-transparent rounded-2xl pointer-events-none" />
+             <div className="flex flex-col md:flex-row gap-8 items-center bg-gray-50/50 p-8 rounded-xl border border-line-strong min-h-[400px]">
+-              <div className="flex-1 w-full">
+-                <WorkflowAnimation />
++              <div className="flex-1 w-full relative z-10">
++                <WorkflowAnimation activeStep={activeStep} />
+               </div>
+-              <div className="flex-1 w-full h-full min-h-[300px] border-2 border-dashed border-[#d1cec7] rounded-xl flex items-center justify-center bg-[#faf9f7] hover:bg-[#f0eee9] transition-colors">
+-                <div className="text-[#a8a49c] font-mono text-sm uppercase tracking-widest font-semibold">
+-                  [ Screenshot: Dashboard Overview ]
+-                </div>
++              <div className="flex-[1.2] w-full h-full relative z-10">
++                <MockDashboard activeStep={activeStep} />
+               </div>
+             </div>
+           </div>
+
+commit 3b964207a7433b3f6e848ad768fcbe37807020e6
+Author: VeshGuy <sarveshaiproj@gmail.com>
+Date:   Wed Jul 29 23:29:05 2026 +0530
+
+    Finalize positioning and polish
+
+diff --git a/src/components/Hero.tsx b/src/components/Hero.tsx
+index fa3fd17..137641a 100644
+--- a/src/components/Hero.tsx
++++ b/src/components/Hero.tsx
+@@ -11,7 +11,7 @@ export default function Hero() {
+         
+         {/* Badge */}
+         <div className="inline-flex items-center px-4 py-1.5 rounded-full bg-surface border border-line-strong mb-8 text-sm font-semibold text-muted shadow-sm hover:shadow-md transition-shadow cursor-default">
+-          <span className="text-accent-ink mr-2">Kaybi is live</span>
++          <span className="text-accent-ink mr-2">Now in private beta</span>
+           <span className="text-faint mx-2">|</span>
+           <span>Built for ops-heavy teams</span>
+         </div>
+@@ -28,10 +28,10 @@ export default function Hero() {
+ 
+         {/* CTAs */}
+         <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
+-          <a href="#book" className="inline-flex items-center justify-center px-7 py-3.5 rounded-xl text-base font-semibold bg-accent-ink text-white hover:bg-[#115e59] hover:-translate-y-0.5 hover:shadow-xl hover:shadow-accent-ink/20 transition-all duration-200">
++          <a href="https://calendly.com/kaybi/teardown" className="inline-flex items-center justify-center px-7 py-3.5 rounded-xl text-base font-semibold bg-accent-ink text-white hover:bg-[#115e59] hover:-translate-y-0.5 hover:shadow-xl hover:shadow-accent-ink/20 transition-all duration-200">
+             Book a Teardown <ArrowRight className="w-5 h-5 ml-2" />
+           </a>
+-          <a href="#demo" className="inline-flex items-center justify-center px-7 py-3.5 rounded-xl text-base font-semibold bg-surface text-ink border border-line-strong hover:bg-paper hover:border-muted shadow-sm hover:shadow-md transition-all duration-200">
++          <a href="mailto:hello@kaybi.com" className="inline-flex items-center justify-center px-7 py-3.5 rounded-xl text-base font-semibold bg-surface text-ink border border-line-strong hover:bg-paper hover:border-muted shadow-sm hover:shadow-md transition-all duration-200">
+             <PlayCircle className="w-5 h-5 mr-2 text-muted" /> Watch Demo
+           </a>
+         </div>
+
+commit f302623c9f9f0e739af89f84d4d15ec68c7960e1
+Author: VeshGuy <sarveshaiproj@gmail.com>
+Date:   Wed Jul 29 23:16:17 2026 +0530
+
+    Clean up punctuation
+
+diff --git a/src/components/Hero.tsx b/src/components/Hero.tsx
+index 49f8d8d..fa3fd17 100644
+--- a/src/components/Hero.tsx
++++ b/src/components/Hero.tsx
+@@ -18,12 +18,12 @@ export default function Hero() {
+ 
+         {/* Heading */}
+         <h1 className="text-6xl md:text-[5rem] max-w-[900px] mx-auto font-bold font-serif text-ink leading-[1.05] tracking-tight mb-8">
+-          AI that runs your operations <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent-ink to-teal-400">the right way</span> ΓÇö every time.
++          AI that runs your operations <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent-ink to-teal-400">the right way</span>, every time.
+         </h1>
+ 
+         {/* Subtitle */}
+         <p className="text-xl md:text-2xl text-muted max-w-[650px] mx-auto mb-12 leading-relaxed">
+-          Your AI follows your approved procedures ΓÇö step by step, every time ΓÇö instead of improvising. And you can see exactly what it did.
++          Your AI follows your approved procedures step by step instead of improvising. And you can see exactly what it did.
+         </p>
+ 
+         {/* CTAs */}
+@@ -38,7 +38,7 @@ export default function Hero() {
+ 
+         {/* Not a chatbot beat */}
+         <div className="mt-8 text-sm text-muted font-medium bg-surface/50 border border-line-strong inline-block px-5 py-2.5 rounded-xl">
+-          A chatbot answers questions when asked. Kaybi makes sure the work runs the right way ΓÇö whether anyone asks or not.
++          A chatbot answers questions when asked. Kaybi makes sure the work runs the right way, whether anyone asks or not.
+         </div>
+         
+         {/* Hero Image Container */}
+
+commit d69d2979be53a57b0b85040937299175375c70c4
+Author: VeshGuy <sarveshaiproj@gmail.com>
+Date:   Wed Jul 29 23:06:49 2026 +0530
+
+    Update positioning to ops-heavy focus
+
+diff --git a/src/components/Hero.tsx b/src/components/Hero.tsx
+index 8c0a2a7..49f8d8d 100644
+--- a/src/components/Hero.tsx
++++ b/src/components/Hero.tsx
+@@ -11,19 +11,19 @@ export default function Hero() {
+         
+         {/* Badge */}
+         <div className="inline-flex items-center px-4 py-1.5 rounded-full bg-surface border border-line-strong mb-8 text-sm font-semibold text-muted shadow-sm hover:shadow-md transition-shadow cursor-default">
+-          <span className="text-accent-ink mr-2">Kaybi v2.0 is live</span>
++          <span className="text-accent-ink mr-2">Kaybi is live</span>
+           <span className="text-faint mx-2">|</span>
+-          <span>The new standard in agent governance</span>
++          <span>Built for ops-heavy teams</span>
+         </div>
+ 
+         {/* Heading */}
+         <h1 className="text-6xl md:text-[5rem] max-w-[900px] mx-auto font-bold font-serif text-ink leading-[1.05] tracking-tight mb-8">
+-          The <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent-ink to-teal-400">control layer</span> for AI agents.
++          AI that runs your operations <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent-ink to-teal-400">the right way</span> ΓÇö every time.
+         </h1>
+ 
+         {/* Subtitle */}
+         <p className="text-xl md:text-2xl text-muted max-w-[650px] mx-auto mb-12 leading-relaxed">
+-          Agents that can't go off-script ΓÇö because they run your approved playbooks, not their own guesses. Put AI agents in production without the liability.
++          Your AI follows your approved procedures ΓÇö step by step, every time ΓÇö instead of improvising. And you can see exactly what it did.
+         </p>
+ 
+         {/* CTAs */}
+@@ -35,6 +35,11 @@ export default function Hero() {
+             <PlayCircle className="w-5 h-5 mr-2 text-muted" /> Watch Demo
+           </a>
+         </div>
++
++        {/* Not a chatbot beat */}
++        <div className="mt-8 text-sm text-muted font-medium bg-surface/50 border border-line-strong inline-block px-5 py-2.5 rounded-xl">
++          A chatbot answers questions when asked. Kaybi makes sure the work runs the right way ΓÇö whether anyone asks or not.
++        </div>
+         
+         {/* Hero Image Container */}
+         <div className="mt-24 px-4 sm:px-0">
+
+commit ed74ba8a0df3c5584e94b081ca479785e8aca96d
+Author: VeshGuy <sarveshaiproj@gmail.com>
+Date:   Wed Jul 29 22:35:52 2026 +0530
+
+    Initial wb commit
+
+diff --git a/src/components/Hero.tsx b/src/components/Hero.tsx
+new file mode 100644
+index 0000000..8c0a2a7
+--- /dev/null
++++ b/src/components/Hero.tsx
+@@ -0,0 +1,58 @@
++import { ArrowRight, PlayCircle } from 'lucide-react';
++import WorkflowAnimation from './WorkflowAnimation';
++
++export default function Hero() {
++  return (
++    <section className="relative pt-28 pb-32 text-center overflow-hidden">
++      {/* Subtle Background Glow */}
++      <div className="absolute top-[-20%] left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-accent-weak/50 rounded-full blur-[100px] pointer-events-none -z-10" />
++
++      <div className="max-w-[1100px] mx-auto px-6 animate-fade-up">
++        
++        {/* Badge */}
++        <div className="inline-flex items-center px-4 py-1.5 rounded-full bg-surface border border-line-strong mb-8 text-sm font-semibold text-muted shadow-sm hover:shadow-md transition-shadow cursor-default">
++          <span className="text-accent-ink mr-2">Kaybi v2.0 is live</span>
++          <span className="text-faint mx-2">|</span>
++          <span>The new standard in agent governance</span>
++        </div>
++
++        {/* Heading */}
++        <h1 className="text-6xl md:text-[5rem] max-w-[900px] mx-auto font-bold font-serif text-ink leading-[1.05] tracking-tight mb-8">
++          The <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent-ink to-teal-400">control layer</span> for AI agents.
++        </h1>
++
++        {/* Subtitle */}
++        <p className="text-xl md:text-2xl text-muted max-w-[650px] mx-auto mb-12 leading-relaxed">
++          Agents that can't go off-script ΓÇö because they run your approved playbooks, not their own guesses. Put AI agents in production without the liability.
++        </p>
++
++        {/* CTAs */}
++        <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
++          <a href="#book" className="inline-flex items-center justify-center px-7 py-3.5 rounded-xl text-base font-semibold bg-accent-ink text-white hover:bg-[#115e59] hover:-translate-y-0.5 hover:shadow-xl hover:shadow-accent-ink/20 transition-all duration-200">
++            Book a Teardown <ArrowRight className="w-5 h-5 ml-2" />
++          </a>
++          <a href="#demo" className="inline-flex items-center justify-center px-7 py-3.5 rounded-xl text-base font-semibold bg-surface text-ink border border-line-strong hover:bg-paper hover:border-muted shadow-sm hover:shadow-md transition-all duration-200">
++            <PlayCircle className="w-5 h-5 mr-2 text-muted" /> Watch Demo
++          </a>
++        </div>
++        
++        {/* Hero Image Container */}
++        <div className="mt-24 px-4 sm:px-0">
++          <div className="relative rounded-2xl border border-line-strong bg-surface p-2 shadow-2xl shadow-ink/5 mx-auto max-w-[1040px]">
++            <div className="absolute inset-0 bg-gradient-to-t from-paper/40 to-transparent rounded-2xl pointer-events-none" />
++            <div className="flex flex-col md:flex-row gap-8 items-center bg-gray-50/50 p-8 rounded-xl border border-line-strong min-h-[400px]">
++              <div className="flex-1 w-full">
++                <WorkflowAnimation />
++              </div>
++              <div className="flex-1 w-full h-full min-h-[300px] border-2 border-dashed border-[#d1cec7] rounded-xl flex items-center justify-center bg-[#faf9f7] hover:bg-[#f0eee9] transition-colors">
++                <div className="text-[#a8a49c] font-mono text-sm uppercase tracking-widest font-semibold">
++                  [ Screenshot: Dashboard Overview ]
++                </div>
++              </div>
++            </div>
++          </div>
++        </div>
++      </div>
++    </section>
++  );
++}

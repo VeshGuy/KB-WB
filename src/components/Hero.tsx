@@ -35,7 +35,7 @@ export default function Hero() {
 
         {/* Subtitle */}
         <p className="text-xl md:text-2xl text-muted max-w-[700px] mx-auto mb-12 leading-relaxed">
-          Kaybi gives your AI a single source of truth for your operations, ensuring it follows exact procedures instead of making costly guesses.
+          Kaybi holds your company's operations in one place, so your AI doesn't go Oops!
         </p>
 
         {/* CTAs */}
