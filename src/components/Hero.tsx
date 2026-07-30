@@ -22,7 +22,7 @@ export default function Hero() {
         
         {/* Heading */}
         <h1 className="text-6xl md:text-[5rem] max-w-[900px] mx-auto font-bold font-serif text-ink leading-[1.05] tracking-tight mb-8 mt-12">
-          The approved rulebook your AI <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent-ink to-teal-400">consults before it acts.</span>
+          The Operations Context Layer your AI <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent-ink to-teal-400">needs before it acts.</span>
         </h1>
 
         {/* Subtitle */}
