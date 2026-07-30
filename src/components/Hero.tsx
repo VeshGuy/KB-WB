@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { ArrowRight, PlayCircle } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import WorkflowAnimation from './WorkflowAnimation';
 import MockDashboard from './MockDashboard';
 
@@ -41,9 +41,6 @@ export default function Hero() {
         <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
           <a href="https://calendly.com/kaybi/teardown" className="inline-flex items-center justify-center px-7 py-3.5 rounded-xl text-base font-semibold bg-accent-ink text-white hover:bg-[#115e59] hover:-translate-y-0.5 hover:shadow-xl hover:shadow-accent-ink/20 transition-all duration-200">
             Book a Demo <ArrowRight className="w-5 h-5 ml-2" />
-          </a>
-          <a href="mailto:hello@kaybi.com" className="inline-flex items-center justify-center px-7 py-3.5 rounded-xl text-base font-semibold bg-surface text-ink border border-line-strong hover:bg-paper hover:border-muted shadow-sm hover:shadow-md transition-all duration-200">
-            <PlayCircle className="w-5 h-5 mr-2 text-muted" /> Watch Demo
           </a>
         </div>
 
