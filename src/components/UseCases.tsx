@@ -9,8 +9,8 @@ export default function UseCases() {
           <h2 className="text-4xl md:text-[3rem] font-bold font-serif text-ink mb-6 tracking-tight">
             Built for <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent-ink to-teal-500">ops-heavy businesses.</span>
           </h2>
-          <p className="text-xl md:text-2xl text-muted max-w-[700px] mx-auto leading-relaxed">
-            Built for operations-heavy teams — customer support, distribution, back-office, and field service.
+          <p className="text-xl md:text-2xl text-[#5a5753] max-w-[800px] mx-auto leading-relaxed">
+            Customer support, distribution, back-office, and field service.
           </p>
         </div>
 
