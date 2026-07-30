@@ -2,6 +2,7 @@ import { Link, AlertCircle, UserCheck, History } from 'lucide-react';
 import MockAuditTrail from './MockAuditTrail';
 import NetworkUpdateAnimation from './NetworkUpdateAnimation';
 import MockApprovedCard from './MockApprovedCard';
+import MockConflictCard from './MockConflictCard';
 
 const features = [
   {
@@ -64,6 +65,10 @@ export default function Features() {
                   ) : feature.title === 'Approved by a human.' ? (
                     <div className="w-full flex items-center justify-center transition-transform duration-500 group-hover:scale-[1.02]">
                       <MockApprovedCard />
+                    </div>
+                  ) : feature.title === 'Always updated.' ? (
+                    <div className="w-full flex items-center justify-center transition-transform duration-500 group-hover:scale-[1.02]">
+                      <MockConflictCard />
                     </div>
                   ) : (
                     <div className="w-full aspect-video rounded-2xl border-2 border-dashed border-[#d1cec7] bg-[#faf9f7] flex items-center justify-center transition-all duration-300 group-hover:bg-[#f0eee9] group-hover:border-[#1c1a17]/20">
