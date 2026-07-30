@@ -61,12 +61,20 @@ export default function NetworkUpdateAnimation() {
         <g stroke="#a5b4fc" strokeWidth="1.5">
           {/* To Salesforce at 200, 125 */}
           <line x1="100" y1="80" x2="200" y2="125" />
+          <line x1="250" y1="60" x2="200" y2="125" />
+          
           {/* To Notion at 210, 215 */}
           <line x1="120" y1="260" x2="210" y2="215" />
+          <line x1="80" y1="170" x2="210" y2="215" />
+
           {/* To Slack at 400, 130 */}
           <line x1="500" y1="90" x2="400" y2="130" />
+          <line x1="350" y1="50" x2="400" y2="130" />
+
           {/* To Sheets at 390, 220 */}
           <line x1="480" y1="270" x2="390" y2="220" />
+          <line x1="310" y1="300" x2="390" y2="220" />
+          <line x1="540" y1="160" x2="390" y2="220" />
         </g>
 
         {/* Animated Edges (Growing from the apps to join the new central node at 300,170) */}
@@ -94,9 +102,17 @@ export default function NetworkUpdateAnimation() {
         {/* Structural Blank Nodes (End points) */}
         <g stroke="#a5b4fc" strokeWidth="2" fill="white">
           <circle cx="100" cy="80" r="8" />
+          <circle cx="250" cy="60" r="8" />
+
           <circle cx="120" cy="260" r="8" />
+          <circle cx="80" cy="170" r="8" />
+
           <circle cx="500" cy="90" r="8" />
+          <circle cx="350" cy="50" r="8" />
+
           <circle cx="480" cy="270" r="8" />
+          <circle cx="310" cy="300" r="8" />
+          <circle cx="540" cy="160" r="8" />
         </g>
 
         {/* App Logos placed ON THE EDGES (Lines) */}
