@@ -1,11 +1,11 @@
-import { FileText, Database, ClipboardList, UserCheck, Code } from 'lucide-react';
+import { FileText, Database, ClipboardList, UserCheck, Activity } from 'lucide-react';
 
 const steps = [
   { id: 'upload', label: 'Upload Docs', icon: FileText, badgeTone: 'blue', badgeText: 'running' },
   { id: 'ingest', label: 'Ingest Live Data', icon: Database, badgeTone: 'indigo', badgeText: 'running' },
   { id: 'produce', label: 'Produce Procedures', icon: ClipboardList, badgeTone: 'purple', badgeText: 'generating' },
   { id: 'approve', label: 'Human Approval', icon: UserCheck, badgeTone: 'amber', badgeText: 'pending' },
-  { id: 'skills', label: 'Skills Generated', icon: Code, badgeTone: 'emerald', badgeText: 'publishing' },
+  { id: 'activity', label: 'Activity Log', icon: Activity, badgeTone: 'emerald', badgeText: 'live' },
 ];
 
 export default function WorkflowAnimation({ activeStep }: { activeStep: number }) {
