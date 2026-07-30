@@ -19,7 +19,7 @@ export default function MockDashboard({ activeStep }: { activeStep: number }) {
                  <img src="https://upload.wikimedia.org/wikipedia/commons/8/87/PDF_file_icon.svg" alt="PDF" className="w-5 h-5" />
               </div>
               <div className="flex-1">
-                 <div className="text-sm font-medium text-ink">Alliance_Vendor_SLA.pdf</div>
+                 <div className="text-sm font-medium text-ink">Alliance Vendor SLA</div>
                  <div className="text-xs text-muted">Extracting text & vectors...</div>
               </div>
               <RefreshCw className="w-4 h-4 text-blue-400 animate-spin shrink-0" />
@@ -30,7 +30,7 @@ export default function MockDashboard({ activeStep }: { activeStep: number }) {
                  <img src="https://cdn.simpleicons.org/confluence/0052CC" alt="Confluence" className="w-5 h-5" />
               </div>
               <div className="flex-1">
-                 <div className="text-sm font-medium text-ink">Routing_Guidelines (Confluence)</div>
+                 <div className="text-sm font-medium text-ink">Routing Guidelines</div>
                  <div className="text-xs text-muted">Queued</div>
               </div>
            </div>
@@ -40,7 +40,7 @@ export default function MockDashboard({ activeStep }: { activeStep: number }) {
                  <img src="https://upload.wikimedia.org/wikipedia/commons/e/e9/Notion-logo.svg" alt="Notion" className="w-5 h-5" />
               </div>
               <div className="flex-1">
-                 <div className="text-sm font-medium text-ink">Dispatch_Playbook (Notion)</div>
+                 <div className="text-sm font-medium text-ink">Dispatch Playbook</div>
                  <div className="text-xs text-muted">Queued</div>
               </div>
            </div>
@@ -50,7 +50,7 @@ export default function MockDashboard({ activeStep }: { activeStep: number }) {
                  <ImageIcon className="w-5 h-5 text-emerald-500" />
               </div>
               <div className="flex-1">
-                 <div className="text-sm font-medium text-ink">Gate_Check_Photo.jpg</div>
+                 <div className="text-sm font-medium text-ink">Gate Check Photo</div>
                  <div className="text-xs text-muted">Queued</div>
               </div>
            </div>
@@ -136,7 +136,17 @@ export default function MockDashboard({ activeStep }: { activeStep: number }) {
                    <ClipboardList className="w-4 h-4 text-purple-500 shrink-0" />
                    <span className="text-sm font-bold text-ink">Procedure: Dispatch Routing Rule</span>
                  </div>
-                 <p className="text-xs text-muted">Source: Alliance_Vendor_SLA.pdf, Dispatch_Playbook (Notion)</p>
+                 <div className="flex items-center gap-2 mt-1">
+                   <span className="text-xs text-muted mr-1">Source:</span>
+                   <div className="flex items-center gap-1.5 bg-white border border-line px-2 py-0.5 rounded text-[10px] font-medium text-ink shadow-sm">
+                     <img src="https://upload.wikimedia.org/wikipedia/commons/8/87/PDF_file_icon.svg" className="w-3 h-3" alt="PDF" />
+                     Alliance Vendor SLA
+                   </div>
+                   <div className="flex items-center gap-1.5 bg-white border border-line px-2 py-0.5 rounded text-[10px] font-medium text-ink shadow-sm">
+                     <img src="https://upload.wikimedia.org/wikipedia/commons/e/e9/Notion-logo.svg" className="w-3 h-3" alt="Notion" />
+                     Dispatch Playbook
+                   </div>
+                 </div>
               </div>
               <div className="p-4 flex flex-col gap-3 flex-1 relative">
                  {/* Connecting line */}
@@ -146,19 +156,19 @@ export default function MockDashboard({ activeStep }: { activeStep: number }) {
                     <div className="flex items-start gap-3">
                        <div className="w-5 h-5 rounded-full bg-surface border border-line flex items-center justify-center text-[10px] font-bold text-muted shrink-0 mt-1">1</div>
                        <div className="bg-surface border border-line rounded p-2.5 text-xs flex-1 shadow-sm">
-                          <span className="font-medium text-ink">Trigger:</span> Load assigned to <span className="px-1.5 py-0.5 bg-gray-200 rounded text-ink">Alliance</span>
+                          <span className="font-medium text-ink">Trigger:</span> New load tendered to <span className="font-semibold text-ink">Alliance</span>
                        </div>
                     </div>
                     <div className="flex items-start gap-3">
                        <div className="w-5 h-5 rounded-full bg-surface border border-line flex items-center justify-center text-[10px] font-bold text-muted shrink-0 mt-1">2</div>
                        <div className="bg-surface border border-line rounded p-2.5 text-xs flex-1 shadow-sm">
-                          <span className="font-medium text-ink">Condition:</span> If <span className="font-mono text-pink-600 bg-pink-50 px-1 rounded">equipment == 'reefer' AND time &lt; 09:00</span>
+                          <span className="font-medium text-ink">Condition:</span> Equipment is a <span className="font-semibold text-ink">Reefer</span> and pickup time is <span className="font-semibold text-ink">before 9:00 AM</span>
                        </div>
                     </div>
                     <div className="flex items-start gap-3 opacity-70 animate-pulse">
                        <div className="w-5 h-5 rounded-full bg-purple-100 border border-purple-200 flex items-center justify-center text-[10px] font-bold text-purple-700 shrink-0 mt-1">3</div>
                        <div className="bg-purple-50 border border-purple-100 rounded p-2.5 text-xs flex-1 text-purple-800 shadow-sm">
-                          <span className="font-medium">Action:</span> Drafting dispatch block...
+                          <span className="font-medium">Action:</span> Block dispatch and alert manager...
                        </div>
                     </div>
                  </div>
@@ -183,7 +193,17 @@ export default function MockDashboard({ activeStep }: { activeStep: number }) {
                    <ShieldAlert className="w-4 h-4 text-amber-500 shrink-0" />
                    <span className="text-sm font-bold text-ink">Procedure: Dispatch Routing Rule</span>
                  </div>
-                 <p className="text-xs text-muted ml-6">Source: Alliance_Vendor_SLA.pdf, Dispatch_Playbook (Notion)</p>
+                 <div className="flex items-center gap-2 mt-1 ml-6">
+                   <span className="text-xs text-muted mr-1">Source:</span>
+                   <div className="flex items-center gap-1.5 bg-white border border-line px-2 py-0.5 rounded text-[10px] font-medium text-ink shadow-sm">
+                     <img src="https://upload.wikimedia.org/wikipedia/commons/8/87/PDF_file_icon.svg" className="w-3 h-3" alt="PDF" />
+                     Alliance Vendor SLA
+                   </div>
+                   <div className="flex items-center gap-1.5 bg-white border border-line px-2 py-0.5 rounded text-[10px] font-medium text-ink shadow-sm">
+                     <img src="https://upload.wikimedia.org/wikipedia/commons/e/e9/Notion-logo.svg" className="w-3 h-3" alt="Notion" />
+                     Dispatch Playbook
+                   </div>
+                 </div>
               </div>
               
               <div className="p-4 flex flex-col gap-2 flex-1 relative bg-white">
@@ -192,19 +212,19 @@ export default function MockDashboard({ activeStep }: { activeStep: number }) {
                     <div className="flex items-start gap-3">
                        <div className="w-5 h-5 rounded-full bg-surface border border-line flex items-center justify-center text-[10px] font-bold text-muted shrink-0 mt-0.5">1</div>
                        <div className="bg-surface border border-line rounded p-2 text-xs flex-1 shadow-sm">
-                          <span className="font-medium text-ink">Trigger:</span> Load assigned to <span className="px-1.5 py-0.5 bg-gray-200 rounded text-ink">Alliance</span>
+                          <span className="font-medium text-ink">Trigger:</span> New load tendered to <span className="font-semibold text-ink">Alliance</span>
                        </div>
                     </div>
                     <div className="flex items-start gap-3">
                        <div className="w-5 h-5 rounded-full bg-surface border border-line flex items-center justify-center text-[10px] font-bold text-muted shrink-0 mt-0.5">2</div>
                        <div className="bg-surface border border-line rounded p-2 text-xs flex-1 shadow-sm">
-                          <span className="font-medium text-ink">Condition:</span> If <span className="font-mono text-pink-600 bg-pink-50 px-1 rounded">equipment == 'reefer' AND time &lt; 09:00</span>
+                          <span className="font-medium text-ink">Condition:</span> Equipment is a <span className="font-semibold text-ink">Reefer</span> and pickup time is <span className="font-semibold text-ink">before 9:00 AM</span>
                        </div>
                     </div>
                     <div className="flex items-start gap-3">
                        <div className="w-5 h-5 rounded-full bg-surface border border-line flex items-center justify-center text-[10px] font-bold text-muted shrink-0 mt-0.5">3</div>
                        <div className="bg-surface border border-line rounded p-2 text-xs flex-1 shadow-sm">
-                          <span className="font-medium text-ink">Action:</span> Block dispatch (Avoid $1,200 fine)
+                          <span className="font-medium text-ink">Action:</span> Block dispatch and alert manager (avoids $1,200 fine)
                        </div>
                     </div>
                  </div>
