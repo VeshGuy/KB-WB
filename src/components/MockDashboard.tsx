@@ -224,19 +224,19 @@ export default function MockDashboard({ activeStep }: { activeStep: number }) {
                        <div className="w-5 h-5 rounded-full bg-surface border border-line flex items-center justify-center text-[10px] font-bold text-muted shrink-0 mt-0.5">3</div>
                        <div className="bg-surface border border-line rounded p-2 text-xs flex-1 shadow-sm">
                           <span className="font-medium text-ink">Action:</span> Block dispatch and alert manager (avoids $1,200 fine)
-                       </div>
-                    </div>
-                 </div>
-              </div>
-              
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               
               <div className="p-3 border-t border-line bg-surface flex gap-2">
-                 <button className="px-4 bg-white border border-line text-ink font-semibold text-xs py-2 rounded-lg hover:bg-paper transition-colors">
+                 <button className="flex-1 bg-white border border-line text-ink font-semibold text-xs py-2 rounded-lg hover:bg-paper transition-colors">
                    Edit
                  </button>
                  <button className="flex-1 bg-ink text-white font-semibold text-xs py-2 rounded-lg hover:bg-black transition-colors">
                    Approve
                  </button>
-                 <button className="px-4 bg-white border border-line text-ink font-semibold text-xs py-2 rounded-lg hover:bg-paper transition-colors">
+                 <button className="flex-1 bg-white border border-line text-ink font-semibold text-xs py-2 rounded-lg hover:bg-paper transition-colors">
                    Reject
                  </button>
               </div>
