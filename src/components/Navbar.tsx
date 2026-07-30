@@ -1,4 +1,4 @@
-import { BookOpen } from 'lucide-react';
+
 
 export default function Navbar() {
   return (
@@ -6,10 +6,7 @@ export default function Navbar() {
       <div className="max-w-[1100px] mx-auto px-6 h-20 flex justify-between items-center">
         
         {/* Logo */}
-        <div className="flex items-center gap-2 cursor-pointer hover:animate-nav-pop group">
-          <div className="bg-accent-weak p-1.5 rounded-lg">
-            <BookOpen className="w-6 h-6 text-accent-ink group-hover:scale-110 transition-transform duration-200" />
-          </div>
+        <div className="flex items-center cursor-pointer hover:animate-nav-pop group">
           <span className="font-serif text-2xl font-semibold tracking-tight text-ink">kaybi</span>
         </div>
 
