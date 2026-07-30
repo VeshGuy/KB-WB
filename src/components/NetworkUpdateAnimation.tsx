@@ -51,41 +51,45 @@ export default function NetworkUpdateAnimation() {
         {/* Dotted Grid */}
         <rect width="100%" height="100%" fill="url(#dotGridSmall)" />
 
-        {/* Existing Edges */}
+        {/* Existing Edges (From peripheral nodes to the apps) */}
         <g stroke="#a5b4fc" strokeWidth="1.5">
-          <line x1="100" y1="80" x2="300" y2="170" />
-          <line x1="120" y1="260" x2="300" y2="170" />
-          <line x1="500" y1="90" x2="300" y2="170" />
-          <line x1="480" y1="270" x2="300" y2="170" />
+          {/* To Salesforce at 200, 125 */}
+          <line x1="100" y1="80" x2="200" y2="125" />
+          {/* To Notion at 210, 215 */}
+          <line x1="120" y1="260" x2="210" y2="215" />
+          {/* To Slack at 400, 130 */}
+          <line x1="500" y1="90" x2="400" y2="130" />
+          {/* To Sheets at 390, 220 */}
+          <line x1="480" y1="270" x2="390" y2="220" />
         </g>
 
-        {/* Animated Edges (shooting FROM 300, 170 to existing nodes) */}
-        <line x1="300" y1="170" x2="100" y2="80" 
+        {/* Animated Edges (Growing from the apps to join the new central node at 300,170) */}
+        <line x1="200" y1="125" x2="300" y2="170" 
           stroke="#10b981" strokeWidth="2" 
-          strokeDasharray="250" strokeDashoffset="250"
-          className="animate-draw-line animate-glow"
-          style={{ animationDelay: '0.6s' }}
-        />
-        <line x1="300" y1="170" x2="120" y2="260" 
-          stroke="#10b981" strokeWidth="2" 
-          strokeDasharray="250" strokeDashoffset="250"
+          strokeDasharray="150" strokeDashoffset="150"
           className="animate-draw-line animate-glow"
           style={{ animationDelay: '0.8s' }}
         />
-        <line x1="300" y1="170" x2="500" y2="90" 
+        <line x1="210" y1="215" x2="300" y2="170" 
           stroke="#10b981" strokeWidth="2" 
-          strokeDasharray="250" strokeDashoffset="250"
+          strokeDasharray="150" strokeDashoffset="150"
           className="animate-draw-line animate-glow"
           style={{ animationDelay: '1.0s' }}
         />
-        <line x1="300" y1="170" x2="480" y2="270" 
+        <line x1="400" y1="130" x2="300" y2="170" 
           stroke="#10b981" strokeWidth="2" 
-          strokeDasharray="250" strokeDashoffset="250"
+          strokeDasharray="150" strokeDashoffset="150"
           className="animate-draw-line animate-glow"
           style={{ animationDelay: '1.2s' }}
         />
+        <line x1="390" y1="220" x2="300" y2="170" 
+          stroke="#10b981" strokeWidth="2" 
+          strokeDasharray="150" strokeDashoffset="150"
+          className="animate-draw-line animate-glow"
+          style={{ animationDelay: '1.4s' }}
+        />
 
-        {/* Structural Blank Nodes (now bigger as requested) */}
+        {/* Structural Blank Nodes (End points) */}
         <g stroke="#a5b4fc" strokeWidth="2" fill="white">
           <circle cx="100" cy="80" r="8" />
           <circle cx="120" cy="260" r="8" />
@@ -118,14 +122,14 @@ export default function NetworkUpdateAnimation() {
         </g>
 
         {/* Central Animated Node */}
-        <g className="animate-node-pop" style={{ transformOrigin: '300px 170px', opacity: 0 }}>
+        <g className="animate-node-pop" style={{ transformOrigin: '300px 170px', opacity: 0, animationDelay: '0.2s' }}>
           <circle cx="300" cy="170" r="28" fill="white" filter="url(#nodeShadowSmall)" />
           <circle cx="300" cy="170" r="28" fill="none" stroke="#10b981" strokeWidth="2" className="animate-glow" />
         </g>
       </svg>
       {/* Kaybi Logo overlay for the central node */}
       <div className="absolute" style={{ left: '50%', top: '50%', transform: 'translate(-50%, -50%)' }}>
-        <div className="animate-node-pop flex items-center justify-center text-[#10b981]" style={{ opacity: 0 }}>
+        <div className="animate-node-pop flex items-center justify-center text-[#10b981]" style={{ opacity: 0, animationDelay: '0.2s' }}>
           <BookOpen className="w-6 h-6" />
         </div>
       </div>
