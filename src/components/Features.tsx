@@ -10,7 +10,7 @@ const features = [
   },
   {
     icon: <AlertCircle />,
-    title: 'Always current.',
+    title: 'Always updated.',
     description: 'It flags outdated and conflicting procedures instead of letting your AI follow the wrong version.'
   },
   {
