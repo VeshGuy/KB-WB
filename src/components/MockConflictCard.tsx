@@ -45,7 +45,7 @@ export default function MockConflictCard() {
 
       {/* Main Conflict Content */}
       <div className="p-5 flex flex-col gap-3 animate-conflict-content relative z-10">
-        <div className="flex gap-2 items-center">
+        <div className="flex flex-wrap gap-2 items-center">
           <span className="px-2 py-1 rounded bg-orange-50 text-orange-700 text-[10px] font-semibold border border-orange-100">Contradicts a fact</span>
           <span className="px-2 py-1 rounded bg-surface text-muted text-[10px] font-semibold border border-line">high confidence</span>
         </div>
@@ -64,7 +64,7 @@ export default function MockConflictCard() {
           Replace the old SOP rule with the new restocking fee policy to ensure the AI gives correct information.
         </div>
         
-        <div className="flex gap-3 mt-2">
+        <div className="flex flex-wrap sm:flex-nowrap gap-3 mt-2">
           <div className="relative">
             <button className="bg-teal-600 text-white px-4 py-2 rounded-lg text-xs font-semibold shadow-sm animate-btn-conflict transition-colors">
               Approve and replace old

@@ -2,10 +2,10 @@ import { Image as ImageIcon, ClipboardList, ShieldAlert, RefreshCw } from 'lucid
 
 export default function MockDashboard({ activeStep }: { activeStep: number }) {
   return (
-    <div className="w-full h-full min-h-[440px] rounded-xl border border-line bg-surface shadow-xl font-sans text-left overflow-hidden flex flex-col relative bg-[#faf9f7]">
+    <div className="w-full h-full min-h-[540px] md:min-h-[440px] rounded-xl border border-line bg-surface shadow-xl font-sans text-left overflow-hidden flex flex-col relative bg-[#faf9f7]">
       
       {/* Step 0: Upload Files */}
-      <div className={`absolute inset-0 transition-opacity duration-700 flex flex-col ${activeStep === 0 ? 'opacity-100 z-10' : 'opacity-0 pointer-events-none z-0'}`}>
+      <div className={`absolute inset-0 transition-opacity duration-700 flex flex-col overflow-y-auto overflow-x-hidden ${activeStep === 0 ? 'opacity-100 z-10' : 'opacity-0 pointer-events-none z-0'}`}>
         <div className="bg-paper border-b border-line px-5 py-4 flex items-center justify-between">
           <div>
             <h3 className="font-bold text-ink">Knowledge Base</h3>
@@ -58,7 +58,7 @@ export default function MockDashboard({ activeStep }: { activeStep: number }) {
       </div>
 
       {/* Step 1: Ingest Live Data */}
-      <div className={`absolute inset-0 transition-opacity duration-700 flex flex-col ${activeStep === 1 ? 'opacity-100 z-10' : 'opacity-0 pointer-events-none z-0'}`}>
+      <div className={`absolute inset-0 transition-opacity duration-700 flex flex-col overflow-y-auto overflow-x-hidden ${activeStep === 1 ? 'opacity-100 z-10' : 'opacity-0 pointer-events-none z-0'}`}>
         <div className="bg-paper border-b border-line px-5 py-4 flex items-center justify-between">
           <div>
             <h3 className="font-bold text-ink">Connections</h3>
@@ -121,7 +121,7 @@ export default function MockDashboard({ activeStep }: { activeStep: number }) {
       </div>
 
       {/* Step 2: Produce Procedures */}
-      <div className={`absolute inset-0 transition-opacity duration-700 flex flex-col ${activeStep === 2 ? 'opacity-100 z-10' : 'opacity-0 pointer-events-none z-0'}`}>
+      <div className={`absolute inset-0 transition-opacity duration-700 flex flex-col overflow-y-auto overflow-x-hidden ${activeStep === 2 ? 'opacity-100 z-10' : 'opacity-0 pointer-events-none z-0'}`}>
         <div className="bg-paper border-b border-line px-5 py-4 flex items-center justify-between">
           <div>
             <h3 className="font-bold text-ink">Procedures</h3>
@@ -136,7 +136,7 @@ export default function MockDashboard({ activeStep }: { activeStep: number }) {
                    <ClipboardList className="w-4 h-4 text-purple-500 shrink-0" />
                    <span className="text-sm font-bold text-ink">Procedure: Dispatch Routing Rule</span>
                  </div>
-                 <div className="flex items-center gap-2 mt-1">
+                 <div className="flex flex-wrap items-center gap-2 mt-1">
                    <span className="text-xs text-muted mr-1">Source:</span>
                    <div className="flex items-center gap-1.5 bg-white border border-line px-2 py-0.5 rounded text-[10px] font-medium text-ink shadow-sm">
                      <img src="https://upload.wikimedia.org/wikipedia/commons/8/87/PDF_file_icon.svg" className="w-3 h-3" alt="PDF" />
@@ -178,7 +178,7 @@ export default function MockDashboard({ activeStep }: { activeStep: number }) {
       </div>
 
       {/* Step 3: Human Approval */}
-      <div className={`absolute inset-0 transition-opacity duration-700 flex flex-col ${activeStep === 3 ? 'opacity-100 z-10' : 'opacity-0 pointer-events-none z-0'}`}>
+      <div className={`absolute inset-0 transition-opacity duration-700 flex flex-col overflow-y-auto overflow-x-hidden ${activeStep === 3 ? 'opacity-100 z-10' : 'opacity-0 pointer-events-none z-0'}`}>
         <div className="bg-paper border-b border-line px-5 py-4 flex items-center justify-between">
           <div>
             <h3 className="font-bold text-ink">Approvals</h3>
@@ -192,7 +192,7 @@ export default function MockDashboard({ activeStep }: { activeStep: number }) {
                    <ShieldAlert className="w-4 h-4 text-amber-500 shrink-0" />
                    <span className="text-sm font-bold text-ink">Procedure: Dispatch Routing Rule</span>
                  </div>
-                 <div className="flex items-center gap-2 mt-1 ml-6">
+                 <div className="flex flex-wrap items-center gap-2 mt-1 md:ml-6">
                    <span className="text-xs text-muted mr-1">Source:</span>
                    <div className="flex items-center gap-1.5 bg-white border border-line px-2 py-0.5 rounded text-[10px] font-medium text-ink shadow-sm">
                      <img src="https://upload.wikimedia.org/wikipedia/commons/8/87/PDF_file_icon.svg" className="w-3 h-3" alt="PDF" />
@@ -245,7 +245,7 @@ export default function MockDashboard({ activeStep }: { activeStep: number }) {
       </div>
 
       {/* Step 4: Skills Generated (Home Dashboard) */}
-      <div className={`absolute inset-0 transition-opacity duration-700 flex flex-col ${activeStep === 4 ? 'opacity-100 z-10' : 'opacity-0 pointer-events-none z-0'}`}>
+      <div className={`absolute inset-0 transition-opacity duration-700 flex flex-col overflow-y-auto overflow-x-hidden ${activeStep === 4 ? 'opacity-100 z-10' : 'opacity-0 pointer-events-none z-0'}`}>
         <div className="bg-paper border-b border-line px-5 py-4 flex items-center justify-between">
           <div>
             <h3 className="font-bold text-ink">Good to see you</h3>

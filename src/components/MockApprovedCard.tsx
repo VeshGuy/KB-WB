@@ -48,7 +48,7 @@ export default function MockApprovedCard() {
           <ShieldAlert className="w-4 h-4 text-amber-500 shrink-0" />
           <span className="text-sm font-bold text-ink">Procedure: Dispatch Routing Rule</span>
         </div>
-        <div className="flex items-center gap-2 mt-1 ml-6">
+        <div className="flex flex-wrap items-center gap-2 mt-1 md:ml-6">
           <span className="text-xs text-muted mr-1">Source:</span>
           <div className="flex items-center gap-1.5 bg-white border border-line px-2 py-0.5 rounded text-[10px] font-medium text-ink shadow-sm">
             <img src="https://upload.wikimedia.org/wikipedia/commons/8/87/PDF_file_icon.svg" className="w-3 h-3" alt="PDF" />
