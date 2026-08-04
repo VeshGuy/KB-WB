@@ -24,9 +24,9 @@ export default function Hero() {
         
         {/* Heading */}
         <h1 className="text-4xl md:text-[5rem] max-w-[1000px] mx-auto font-bold font-serif text-ink leading-[1.15] md:leading-[1.05] tracking-tight mb-6 md:mb-8 mt-8 md:mt-12">
-          The <span className="relative inline-block whitespace-nowrap">
+          The <span className="relative inline-block md:whitespace-nowrap">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent-ink to-teal-400">Operations Context Layer</span>
-            <svg className="absolute -bottom-1 left-0 w-full h-4 text-teal-400/80" viewBox="0 0 200 15" fill="none" preserveAspectRatio="none">
+            <svg className="hidden md:block absolute -bottom-1 left-0 w-full h-4 text-teal-400/80" viewBox="0 0 200 15" fill="none" preserveAspectRatio="none">
               <path d="M 2 12 Q 50 2 100 8 T 198 12" stroke="currentColor" strokeWidth="3" strokeLinecap="round"/>
             </svg>
           </span>
@@ -49,7 +49,7 @@ export default function Hero() {
         <div className="mt-12 md:mt-24 px-4 sm:px-0">
           <div className="relative rounded-2xl border border-line-strong bg-surface p-2 shadow-2xl shadow-ink/5 mx-auto max-w-[1040px]">
             <div className="absolute inset-0 bg-gradient-to-t from-paper/40 to-transparent rounded-2xl pointer-events-none" />
-            <div className="flex flex-col md:flex-row gap-8 items-center bg-gray-50/50 p-8 rounded-xl border border-line-strong min-h-[400px]">
+            <div className="flex flex-col md:flex-row gap-6 md:gap-8 items-center bg-gray-50/50 p-3 sm:p-4 md:p-8 rounded-xl border border-line-strong min-h-[400px]">
               <div className="flex-1 w-full relative z-10">
                 <WorkflowAnimation activeStep={activeStep} />
               </div>
