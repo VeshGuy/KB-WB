@@ -11,14 +11,14 @@ export default function Navbar() {
         </div>
 
         {/* Navigation */}
-        <div className="flex items-center gap-12">
-          <a href="#features" className="text-sm font-semibold text-muted hover:text-ink transition-colors duration-200">
+        <div className="flex items-center gap-4 md:gap-12">
+          <a href="#features" className="hidden md:block text-sm font-semibold text-muted hover:text-ink transition-colors duration-200">
             Features
           </a>
-          <a href="#usecases" className="text-sm font-semibold text-muted hover:text-ink transition-colors duration-200">
+          <a href="#usecases" className="hidden md:block text-sm font-semibold text-muted hover:text-ink transition-colors duration-200">
             Use Cases
           </a>
-          <a href="https://calendly.com/kaybi/teardown" className="inline-flex items-center justify-center px-5 py-2.5 rounded-lg text-sm font-semibold bg-accent-ink text-white hover:bg-[#115e59] hover:-translate-y-[1px] hover:shadow-lg transition-all duration-200 shadow shadow-accent-ink/20">
+          <a href="https://calendly.com/kaybi/teardown" className="inline-flex items-center justify-center px-4 md:px-5 py-2 md:py-2.5 rounded-lg text-sm font-semibold bg-accent-ink text-white hover:bg-[#115e59] hover:-translate-y-[1px] hover:shadow-lg transition-all duration-200 shadow shadow-accent-ink/20">
             Book a Demo
           </a>
         </div>

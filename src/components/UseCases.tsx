@@ -2,11 +2,11 @@ import { ArrowRight } from 'lucide-react';
 
 export default function UseCases() {
   return (
-    <section id="usecases" className="py-24 bg-paper relative">
+    <section id="usecases" className="py-16 md:py-24 bg-paper relative">
       <div className="max-w-[1100px] mx-auto px-6">
         
         <div className="text-center animate-fade-up">
-          <h2 className="text-4xl md:text-[3rem] font-bold font-serif text-ink mb-6 tracking-tight">
+          <h2 className="text-3xl md:text-[3rem] font-bold font-serif text-ink mb-6 tracking-tight">
             Built for <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent-ink to-teal-500">ops-heavy businesses.</span>
           </h2>
           <p className="text-xl md:text-2xl text-[#5a5753] max-w-[800px] mx-auto leading-relaxed">
@@ -14,7 +14,7 @@ export default function UseCases() {
           </p>
         </div>
 
-        <div className="mt-20 text-center animate-fade-up border-t border-line pt-16">
+        <div className="mt-12 md:mt-20 text-center animate-fade-up border-t border-line pt-12 md:pt-16">
           <h3 className="text-3xl md:text-4xl font-bold font-serif text-ink mb-8 tracking-tight">
             Want to make your operations AI-ready?
           </h3>

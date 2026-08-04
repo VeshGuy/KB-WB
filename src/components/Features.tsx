@@ -29,13 +29,13 @@ const features = [
 
 export default function Features() {
   return (
-    <section id="features" className="py-32 px-6 bg-white relative">
+    <section id="features" className="py-16 md:py-32 px-6 bg-white relative">
       <div className="max-w-[1200px] mx-auto">
-        <h2 className="text-4xl md:text-5xl font-black text-[#1c1a17] mb-24 text-center">
+        <h2 className="text-3xl md:text-5xl font-black text-[#1c1a17] mb-12 md:mb-24 text-center">
           How Kaybi keeps your operations on track
         </h2>
         
-        <div className="flex flex-col gap-32">
+        <div className="flex flex-col gap-16 md:gap-32">
           {features.map((feature, idx) => {
             const isEven = idx % 2 === 0;
             return (
@@ -46,7 +46,7 @@ export default function Features() {
                   <div className="w-14 h-14 rounded-2xl bg-[#f0eee9] text-[#1c1a17] flex items-center justify-center">
                     {feature.icon}
                   </div>
-                  <h3 className="text-3xl font-bold text-[#1c1a17]">{feature.title}</h3>
+                  <h3 className="text-2xl md:text-3xl font-bold text-[#1c1a17]">{feature.title}</h3>
                   <p className="text-lg text-[#5a5753] leading-relaxed max-w-md">
                     {feature.description}
                   </p>

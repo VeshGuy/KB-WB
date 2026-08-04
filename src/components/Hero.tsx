@@ -15,7 +15,7 @@ export default function Hero() {
   }, []);
 
   return (
-    <section className="relative pt-28 pb-32 text-center overflow-hidden">
+    <section className="relative pt-20 md:pt-28 pb-16 md:pb-32 text-center overflow-hidden">
       <NetworkBackground />
       {/* Subtle Background Glow */}
       <div className="absolute top-[-20%] left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-accent-weak/50 rounded-full blur-[100px] pointer-events-none -z-10" />
@@ -23,7 +23,7 @@ export default function Hero() {
       <div className="max-w-[1100px] mx-auto px-6 animate-fade-up">
         
         {/* Heading */}
-        <h1 className="text-6xl md:text-[5rem] max-w-[1000px] mx-auto font-bold font-serif text-ink leading-[1.05] tracking-tight mb-8 mt-12">
+        <h1 className="text-4xl md:text-[5rem] max-w-[1000px] mx-auto font-bold font-serif text-ink leading-[1.15] md:leading-[1.05] tracking-tight mb-6 md:mb-8 mt-8 md:mt-12">
           The <span className="relative inline-block whitespace-nowrap">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent-ink to-teal-400">Operations Context Layer</span>
             <svg className="absolute -bottom-1 left-0 w-full h-4 text-teal-400/80" viewBox="0 0 200 15" fill="none" preserveAspectRatio="none">
@@ -46,14 +46,14 @@ export default function Hero() {
         </div>
         
         {/* Hero Image Container */}
-        <div className="mt-24 px-4 sm:px-0">
+        <div className="mt-12 md:mt-24 px-4 sm:px-0">
           <div className="relative rounded-2xl border border-line-strong bg-surface p-2 shadow-2xl shadow-ink/5 mx-auto max-w-[1040px]">
             <div className="absolute inset-0 bg-gradient-to-t from-paper/40 to-transparent rounded-2xl pointer-events-none" />
             <div className="flex flex-col md:flex-row gap-8 items-center bg-gray-50/50 p-8 rounded-xl border border-line-strong min-h-[400px]">
               <div className="flex-1 w-full relative z-10">
                 <WorkflowAnimation activeStep={activeStep} />
               </div>
-              <div className="flex-[1.2] w-full h-[440px] relative z-10">
+              <div className="flex-[1.2] w-full min-h-[440px] md:h-[440px] relative z-10">
                 <MockDashboard activeStep={activeStep} />
               </div>
             </div>
